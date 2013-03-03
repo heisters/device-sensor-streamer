@@ -20,6 +20,9 @@
 		9A7F401A16E2E6E000DDBE40 /* SensorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7F401916E2E6E000DDBE40 /* SensorViewController.m */; };
 		9A7F402616E2ED7E00DDBE40 /* icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F402416E2ED7E00DDBE40 /* icon-retina.png */; };
 		9A7F402716E2ED7E00DDBE40 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F402516E2ED7E00DDBE40 /* icon.png */; };
+		9A7F402A16E2F65D00DDBE40 /* acceleration.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F402816E2F65D00DDBE40 /* acceleration.png */; };
+		9A7F402B16E2F65D00DDBE40 /* network.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F402916E2F65D00DDBE40 /* network.png */; };
+		9A7F402F16E2F91000DDBE40 /* webcam-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F402E16E2F91000DDBE40 /* webcam-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		9A7F401916E2E6E000DDBE40 /* SensorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorViewController.m; sourceTree = "<group>"; };
 		9A7F402416E2ED7E00DDBE40 /* icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-retina.png"; path = "../icon-retina.png"; sourceTree = "<group>"; };
 		9A7F402516E2ED7E00DDBE40 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		9A7F402816E2F65D00DDBE40 /* acceleration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = acceleration.png; path = ../acceleration.png; sourceTree = "<group>"; };
+		9A7F402916E2F65D00DDBE40 /* network.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = network.png; path = ../network.png; sourceTree = "<group>"; };
+		9A7F402E16E2F91000DDBE40 /* webcam-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "webcam-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 		9A7F400416E2E6DF00DDBE40 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9A7F402E16E2F91000DDBE40 /* webcam-icon.png */,
+				9A7F402816E2F65D00DDBE40 /* acceleration.png */,
+				9A7F402916E2F65D00DDBE40 /* network.png */,
 				9A7F400C16E2E6DF00DDBE40 /* SensorAppDelegate.h */,
 				9A7F400D16E2E6DF00DDBE40 /* SensorAppDelegate.m */,
 				9A7F402416E2ED7E00DDBE40 /* icon-retina.png */,
@@ -172,6 +181,9 @@
 				9A7F401716E2E6DF00DDBE40 /* MainStoryboard.storyboard in Resources */,
 				9A7F402616E2ED7E00DDBE40 /* icon-retina.png in Resources */,
 				9A7F402716E2ED7E00DDBE40 /* icon.png in Resources */,
+				9A7F402A16E2F65D00DDBE40 /* acceleration.png in Resources */,
+				9A7F402B16E2F65D00DDBE40 /* network.png in Resources */,
+				9A7F402F16E2F91000DDBE40 /* webcam-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
