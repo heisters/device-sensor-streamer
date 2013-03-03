@@ -18,17 +18,19 @@
 		9A7F401416E2E6DF00DDBE40 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F401316E2E6DF00DDBE40 /* Default-568h@2x.png */; };
 		9A7F401716E2E6DF00DDBE40 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F401516E2E6DF00DDBE40 /* MainStoryboard.storyboard */; };
 		9A7F401A16E2E6E000DDBE40 /* SensorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7F401916E2E6E000DDBE40 /* SensorViewController.m */; };
+		9A7F402616E2ED7E00DDBE40 /* icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F402416E2ED7E00DDBE40 /* icon-retina.png */; };
+		9A7F402716E2ED7E00DDBE40 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F402516E2ED7E00DDBE40 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9A7F3FFA16E2E6DF00DDBE40 /* device-sensor-streamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "device-sensor-streamer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A7F3FFA16E2E6DF00DDBE40 /* SensorStreamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorStreamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7F3FFD16E2E6DF00DDBE40 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A7F3FFF16E2E6DF00DDBE40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9A7F400116E2E6DF00DDBE40 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9A7F400516E2E6DF00DDBE40 /* device-sensor-streamer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "device-sensor-streamer-Info.plist"; sourceTree = "<group>"; };
+		9A7F400516E2E6DF00DDBE40 /* SensorStreamer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SensorStreamer-Info.plist"; sourceTree = "<group>"; };
 		9A7F400716E2E6DF00DDBE40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A7F400916E2E6DF00DDBE40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9A7F400B16E2E6DF00DDBE40 /* device-sensor-streamer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "device-sensor-streamer-Prefix.pch"; sourceTree = "<group>"; };
+		9A7F400B16E2E6DF00DDBE40 /* SensorStreamer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SensorStreamer-Prefix.pch"; sourceTree = "<group>"; };
 		9A7F400C16E2E6DF00DDBE40 /* SensorAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensorAppDelegate.h; sourceTree = "<group>"; };
 		9A7F400D16E2E6DF00DDBE40 /* SensorAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorAppDelegate.m; sourceTree = "<group>"; };
 		9A7F400F16E2E6DF00DDBE40 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -37,6 +39,8 @@
 		9A7F401616E2E6DF00DDBE40 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9A7F401816E2E6DF00DDBE40 /* SensorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensorViewController.h; sourceTree = "<group>"; };
 		9A7F401916E2E6E000DDBE40 /* SensorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorViewController.m; sourceTree = "<group>"; };
+		9A7F402416E2ED7E00DDBE40 /* icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-retina.png"; path = "../icon-retina.png"; sourceTree = "<group>"; };
+		9A7F402516E2ED7E00DDBE40 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +69,7 @@
 		9A7F3FFB16E2E6DF00DDBE40 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A7F3FFA16E2E6DF00DDBE40 /* device-sensor-streamer.app */,
+				9A7F3FFA16E2E6DF00DDBE40 /* SensorStreamer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,8 +87,6 @@
 		9A7F400316E2E6DF00DDBE40 /* device-sensor-streamer */ = {
 			isa = PBXGroup;
 			children = (
-				9A7F400C16E2E6DF00DDBE40 /* SensorAppDelegate.h */,
-				9A7F400D16E2E6DF00DDBE40 /* SensorAppDelegate.m */,
 				9A7F401516E2E6DF00DDBE40 /* MainStoryboard.storyboard */,
 				9A7F401816E2E6DF00DDBE40 /* SensorViewController.h */,
 				9A7F401916E2E6E000DDBE40 /* SensorViewController.m */,
@@ -96,10 +98,14 @@
 		9A7F400416E2E6DF00DDBE40 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9A7F400516E2E6DF00DDBE40 /* device-sensor-streamer-Info.plist */,
+				9A7F400C16E2E6DF00DDBE40 /* SensorAppDelegate.h */,
+				9A7F400D16E2E6DF00DDBE40 /* SensorAppDelegate.m */,
+				9A7F402416E2ED7E00DDBE40 /* icon-retina.png */,
+				9A7F402516E2ED7E00DDBE40 /* icon.png */,
+				9A7F400516E2E6DF00DDBE40 /* SensorStreamer-Info.plist */,
 				9A7F400616E2E6DF00DDBE40 /* InfoPlist.strings */,
 				9A7F400916E2E6DF00DDBE40 /* main.m */,
-				9A7F400B16E2E6DF00DDBE40 /* device-sensor-streamer-Prefix.pch */,
+				9A7F400B16E2E6DF00DDBE40 /* SensorStreamer-Prefix.pch */,
 				9A7F400F16E2E6DF00DDBE40 /* Default.png */,
 				9A7F401116E2E6DF00DDBE40 /* Default@2x.png */,
 				9A7F401316E2E6DF00DDBE40 /* Default-568h@2x.png */,
@@ -110,9 +116,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9A7F3FF916E2E6DF00DDBE40 /* device-sensor-streamer */ = {
+		9A7F3FF916E2E6DF00DDBE40 /* SensorStreamer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9A7F401D16E2E6E000DDBE40 /* Build configuration list for PBXNativeTarget "device-sensor-streamer" */;
+			buildConfigurationList = 9A7F401D16E2E6E000DDBE40 /* Build configuration list for PBXNativeTarget "SensorStreamer" */;
 			buildPhases = (
 				9A7F3FF616E2E6DF00DDBE40 /* Sources */,
 				9A7F3FF716E2E6DF00DDBE40 /* Frameworks */,
@@ -122,9 +128,9 @@
 			);
 			dependencies = (
 			);
-			name = "device-sensor-streamer";
+			name = SensorStreamer;
 			productName = "device-sensor-streamer";
-			productReference = 9A7F3FFA16E2E6DF00DDBE40 /* device-sensor-streamer.app */;
+			productReference = 9A7F3FFA16E2E6DF00DDBE40 /* SensorStreamer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +143,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Gatormeier Business Consulting";
 			};
-			buildConfigurationList = 9A7F3FF516E2E6DF00DDBE40 /* Build configuration list for PBXProject "device-sensor-streamer" */;
+			buildConfigurationList = 9A7F3FF516E2E6DF00DDBE40 /* Build configuration list for PBXProject "SensorStreamer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -149,7 +155,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9A7F3FF916E2E6DF00DDBE40 /* device-sensor-streamer */,
+				9A7F3FF916E2E6DF00DDBE40 /* SensorStreamer */,
 			);
 		};
 /* End PBXProject section */
@@ -164,6 +170,8 @@
 				9A7F401216E2E6DF00DDBE40 /* Default@2x.png in Resources */,
 				9A7F401416E2E6DF00DDBE40 /* Default-568h@2x.png in Resources */,
 				9A7F401716E2E6DF00DDBE40 /* MainStoryboard.storyboard in Resources */,
+				9A7F402616E2ED7E00DDBE40 /* icon-retina.png in Resources */,
+				9A7F402716E2ED7E00DDBE40 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +270,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "device-sensor-streamer/device-sensor-streamer-Prefix.pch";
-				INFOPLIST_FILE = "device-sensor-streamer/device-sensor-streamer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "device-sensor-streamer/SensorStreamer-Prefix.pch";
+				INFOPLIST_FILE = "device-sensor-streamer/SensorStreamer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = SensorStreamer;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -273,9 +282,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "device-sensor-streamer/device-sensor-streamer-Prefix.pch";
-				INFOPLIST_FILE = "device-sensor-streamer/device-sensor-streamer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "device-sensor-streamer/SensorStreamer-Prefix.pch";
+				INFOPLIST_FILE = "device-sensor-streamer/SensorStreamer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = SensorStreamer;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -283,7 +293,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9A7F3FF516E2E6DF00DDBE40 /* Build configuration list for PBXProject "device-sensor-streamer" */ = {
+		9A7F3FF516E2E6DF00DDBE40 /* Build configuration list for PBXProject "SensorStreamer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9A7F401B16E2E6E000DDBE40 /* Debug */,
@@ -292,7 +302,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9A7F401D16E2E6E000DDBE40 /* Build configuration list for PBXNativeTarget "device-sensor-streamer" */ = {
+		9A7F401D16E2E6E000DDBE40 /* Build configuration list for PBXNativeTarget "SensorStreamer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9A7F401E16E2E6E000DDBE40 /* Debug */,
