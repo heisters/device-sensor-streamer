@@ -7,7 +7,6 @@
     //
 
 #import "SensorSettingsController.h"
-#import "RegexKitLite.h"
 
 @interface SensorSettingsController()
 

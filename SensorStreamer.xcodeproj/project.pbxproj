@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A29D20016E3D94C005519C6 /* SensorSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29D1FF16E3D94C005519C6 /* SensorSettings.m */; };
 		9A7F3FFE16E2E6DF00DDBE40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7F3FFD16E2E6DF00DDBE40 /* UIKit.framework */; };
 		9A7F400016E2E6DF00DDBE40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7F3FFF16E2E6DF00DDBE40 /* Foundation.framework */; };
 		9A7F400216E2E6DF00DDBE40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7F400116E2E6DF00DDBE40 /* CoreGraphics.framework */; };
@@ -28,6 +29,8 @@
 /* Begin PBXFileReference section */
 		9A149D8416E3429A00CDFE90 /* RegexKitLite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		9A149D8516E3429A00CDFE90 /* RegexKitLite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		9A29D1FE16E3D94C005519C6 /* SensorSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorSettings.h; path = models/SensorSettings.h; sourceTree = "<group>"; };
+		9A29D1FF16E3D94C005519C6 /* SensorSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorSettings.m; path = models/SensorSettings.m; sourceTree = "<group>"; };
 		9A7F3FFA16E2E6DF00DDBE40 /* SensorStreamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorStreamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7F3FFD16E2E6DF00DDBE40 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A7F3FFF16E2E6DF00DDBE40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A29D20116E3D951005519C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9A29D1FE16E3D94C005519C6 /* SensorSettings.h */,
+				9A29D1FF16E3D94C005519C6 /* SensorSettings.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		9A7F3FF116E2E6DF00DDBE40 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +110,7 @@
 				9A7F401516E2E6DF00DDBE40 /* MainStoryboard.storyboard */,
 				9A7F403416E3024900DDBE40 /* SensorSettingsController.h */,
 				9A7F403516E3024900DDBE40 /* SensorSettingsController.m */,
+				9A29D20116E3D951005519C6 /* Models */,
 				9A7F400416E2E6DF00DDBE40 /* Supporting Files */,
 				9A7F403316E3018700DDBE40 /* Images */,
 			);
@@ -209,6 +222,7 @@
 				9A7F400A16E2E6DF00DDBE40 /* main.m in Sources */,
 				9A7F400E16E2E6DF00DDBE40 /* SensorAppDelegate.m in Sources */,
 				9A7F403616E3024900DDBE40 /* SensorSettingsController.m in Sources */,
+				9A29D20016E3D94C005519C6 /* SensorSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
