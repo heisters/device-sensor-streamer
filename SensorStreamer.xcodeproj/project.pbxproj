@@ -17,15 +17,17 @@
 		9A7F401216E2E6DF00DDBE40 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F401116E2E6DF00DDBE40 /* Default@2x.png */; };
 		9A7F401416E2E6DF00DDBE40 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F401316E2E6DF00DDBE40 /* Default-568h@2x.png */; };
 		9A7F401716E2E6DF00DDBE40 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F401516E2E6DF00DDBE40 /* MainStoryboard.storyboard */; };
-		9A7F401A16E2E6E000DDBE40 /* SensorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7F401916E2E6E000DDBE40 /* SensorViewController.m */; };
 		9A7F402616E2ED7E00DDBE40 /* icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F402416E2ED7E00DDBE40 /* icon-retina.png */; };
 		9A7F402716E2ED7E00DDBE40 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F402516E2ED7E00DDBE40 /* icon.png */; };
 		9A7F402A16E2F65D00DDBE40 /* acceleration.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F402816E2F65D00DDBE40 /* acceleration.png */; };
 		9A7F402B16E2F65D00DDBE40 /* network.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F402916E2F65D00DDBE40 /* network.png */; };
 		9A7F402F16E2F91000DDBE40 /* webcam-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F402E16E2F91000DDBE40 /* webcam-icon.png */; };
+		9A7F403616E3024900DDBE40 /* SensorSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7F403516E3024900DDBE40 /* SensorSettingsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A149D8416E3429A00CDFE90 /* RegexKitLite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		9A149D8516E3429A00CDFE90 /* RegexKitLite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		9A7F3FFA16E2E6DF00DDBE40 /* SensorStreamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorStreamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7F3FFD16E2E6DF00DDBE40 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A7F3FFF16E2E6DF00DDBE40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,13 +42,13 @@
 		9A7F401116E2E6DF00DDBE40 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9A7F401316E2E6DF00DDBE40 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9A7F401616E2E6DF00DDBE40 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		9A7F401816E2E6DF00DDBE40 /* SensorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensorViewController.h; sourceTree = "<group>"; };
-		9A7F401916E2E6E000DDBE40 /* SensorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorViewController.m; sourceTree = "<group>"; };
 		9A7F402416E2ED7E00DDBE40 /* icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-retina.png"; path = "../icon-retina.png"; sourceTree = "<group>"; };
 		9A7F402516E2ED7E00DDBE40 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		9A7F402816E2F65D00DDBE40 /* acceleration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = acceleration.png; path = ../acceleration.png; sourceTree = "<group>"; };
 		9A7F402916E2F65D00DDBE40 /* network.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = network.png; path = ../network.png; sourceTree = "<group>"; };
 		9A7F402E16E2F91000DDBE40 /* webcam-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "webcam-icon.png"; sourceTree = "<group>"; };
+		9A7F403416E3024900DDBE40 /* SensorSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorSettingsController.h; sourceTree = "<group>"; };
+		9A7F403516E3024900DDBE40 /* SensorSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorSettingsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +96,10 @@
 			isa = PBXGroup;
 			children = (
 				9A7F401516E2E6DF00DDBE40 /* MainStoryboard.storyboard */,
-				9A7F401816E2E6DF00DDBE40 /* SensorViewController.h */,
-				9A7F401916E2E6E000DDBE40 /* SensorViewController.m */,
+				9A7F403416E3024900DDBE40 /* SensorSettingsController.h */,
+				9A7F403516E3024900DDBE40 /* SensorSettingsController.m */,
 				9A7F400416E2E6DF00DDBE40 /* Supporting Files */,
+				9A7F403316E3018700DDBE40 /* Images */,
 			);
 			path = "device-sensor-streamer";
 			sourceTree = "<group>";
@@ -104,22 +107,31 @@
 		9A7F400416E2E6DF00DDBE40 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9A7F402E16E2F91000DDBE40 /* webcam-icon.png */,
-				9A7F402816E2F65D00DDBE40 /* acceleration.png */,
-				9A7F402916E2F65D00DDBE40 /* network.png */,
+				9A149D8416E3429A00CDFE90 /* RegexKitLite.h */,
+				9A149D8516E3429A00CDFE90 /* RegexKitLite.m */,
 				9A7F400C16E2E6DF00DDBE40 /* SensorAppDelegate.h */,
 				9A7F400D16E2E6DF00DDBE40 /* SensorAppDelegate.m */,
-				9A7F402416E2ED7E00DDBE40 /* icon-retina.png */,
-				9A7F402516E2ED7E00DDBE40 /* icon.png */,
 				9A7F400516E2E6DF00DDBE40 /* SensorStreamer-Info.plist */,
 				9A7F400616E2E6DF00DDBE40 /* InfoPlist.strings */,
 				9A7F400916E2E6DF00DDBE40 /* main.m */,
 				9A7F400B16E2E6DF00DDBE40 /* SensorStreamer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A7F403316E3018700DDBE40 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9A7F402E16E2F91000DDBE40 /* webcam-icon.png */,
+				9A7F402816E2F65D00DDBE40 /* acceleration.png */,
+				9A7F402916E2F65D00DDBE40 /* network.png */,
+				9A7F402416E2ED7E00DDBE40 /* icon-retina.png */,
+				9A7F402516E2ED7E00DDBE40 /* icon.png */,
 				9A7F400F16E2E6DF00DDBE40 /* Default.png */,
 				9A7F401116E2E6DF00DDBE40 /* Default@2x.png */,
 				9A7F401316E2E6DF00DDBE40 /* Default-568h@2x.png */,
 			);
-			name = "Supporting Files";
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +208,7 @@
 			files = (
 				9A7F400A16E2E6DF00DDBE40 /* main.m in Sources */,
 				9A7F400E16E2E6DF00DDBE40 /* SensorAppDelegate.m in Sources */,
-				9A7F401A16E2E6E000DDBE40 /* SensorViewController.m in Sources */,
+				9A7F403616E3024900DDBE40 /* SensorSettingsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +333,7 @@
 				9A7F401F16E2E6E000DDBE40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
