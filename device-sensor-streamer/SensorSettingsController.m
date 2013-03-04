@@ -7,13 +7,40 @@
     //
 
 #import "SensorSettingsController.h"
+#import "SensorSettings.h"
 
 @interface SensorSettingsController()
+
+@property (nonatomic, strong) SensorSettings* sensorSettings;
 
 @end
 
 @implementation SensorSettingsController
+
+-(SensorSettings* )sensorSettings {
+    if (!_sensorSettings) {
+        _sensorSettings = [[SensorSettings alloc] initWithPreviousStateIfPossible];
+    }
+    return _sensorSettings;
+}
+
 #pragma mark Action handlers
+
+- (void) viewDidLoad {
+    if ([self.sensorSettings hasPreviousState]) {
+        BOOL usingBrodacast = self.sensorSettings.isUsingBroadcast;
+        self.udpMode.selectedSegmentIndex = (usingBrodacast ? 1 : 0);
+        self.targetAddress.text = self.sensorSettings.targetAddress;
+
+        self.shouldSendAccelerometerData.on = self.sensorSettings.isAccelerometerSendingData;
+        self.accelerometerPort.text = [NSString stringWithFormat:@"%d", self.sensorSettings.accelerometerPort];
+
+        self.shouldSendCameraData.on = self.sensorSettings.isCameraSendingData;
+        self.cameraPort.text = [NSString stringWithFormat:@"%d", self.sensorSettings.cameraPort];
+        BOOL usingFront = self.sensorSettings.isUsingFrontCamera;
+        self.cameraSource.selectedSegmentIndex = (usingFront ? 0 : 1);
+    }
+}
 
 - (IBAction)udpModeChanged:(UISegmentedControl *)sender {
         // Update state state of the address field, but nothing else
@@ -33,35 +60,44 @@
 }
 
 - (IBAction)settingsChanged {
-        // Run validation, and store to database
-    [self validateAndApplyInput];
+        // store to database, and apply to running models
     [self storeInput];
-
 }
 
 #pragma mark -
-#pragma mark Validation methods
+#pragma mark Other methods
 
-- (void)validateAndApplyInput {
+- (void)storeInput {
     NSInteger mode = self.udpMode.selectedSegmentIndex;
+    BOOL usingBroadcast = (mode == 1);
     NSString* address = self.targetAddress.text;
 
-    BOOL sendAcceleormeterData  = self.shouldSendAccelerometerData.on;
+    BOOL sendAccelerometerData  = self.shouldSendAccelerometerData.on;
     NSString* accelerometerPort = self.accelerometerPort.text;
 
     BOOL sendCameraData = self.shouldSendCameraData.on;
     NSString* cameraPort = self.cameraPort.text;
     NSInteger cameraSource = self.cameraSource.selectedSegmentIndex;
-        //TODO: implement validation
+    BOOL cameraFront = (cameraSource == 0);
 
-        //TODO: put all other info into model object
-}
-
-#pragma mark -
-#pragma mark DB interface methods
-
--(void) storeInput {
-        //TODO: store in DB model object
+        // Set direct settings
+    self.sensorSettings.usingBroadcast = usingBroadcast;
+    self.sensorSettings.accelerometerSendingData = sendAccelerometerData;
+    self.sensorSettings.cameraSendingData = sendCameraData;
+    self.sensorSettings.usingFrontCamera = cameraFront;
+    self.sensorSettings.targetAddress = address;
+        // Set settings that require internal validation
+    if ([self.sensorSettings setAccelerometerPortWithString:accelerometerPort]) {
+        self.accelerometerPort.backgroundColor = [UIColor whiteColor];
+    } else {
+        self.accelerometerPort.backgroundColor = [UIColor redColor];
+    }
+    
+    if ([self.sensorSettings setCameraPortWithString:cameraPort]) {
+        self.cameraPort.backgroundColor = [UIColor whiteColor];
+    } else {
+        self.cameraPort.backgroundColor = [UIColor redColor];
+    }
 }
 
 #pragma mark -

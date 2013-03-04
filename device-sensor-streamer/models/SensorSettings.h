@@ -11,8 +11,8 @@
 #pragma mark Public properties
 @interface SensorSettings : NSObject
 
-@property (nonatomic, getter = isBroadcasting) BOOL broadcasting;
-@property (nonatomic, strong) NSURL* targetAddress;
+@property (nonatomic, getter = isUsingBroadcast) BOOL usingBroadcast;
+@property (nonatomic, strong) NSString* targetAddress;
 
 @property (nonatomic, getter = isAccelerometerSendingData) BOOL accelerometerSendingData;
 @property (nonatomic) NSInteger accelerometerPort;
@@ -24,9 +24,11 @@
 #pragma mark -
 #pragma mark Public methods
 
-- (BOOL) setTargetAddressWithString:(NSString* )string;
 - (BOOL) setAccelerometerPortWithString:(NSString* )string;
 - (BOOL) setCameraPortWithString:(NSString* )string;
+
+-(id) initWithPreviousStateIfPossible;
+-(BOOL) hasPreviousState;
 
 #pragma mark -
 @end
