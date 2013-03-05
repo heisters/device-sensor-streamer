@@ -7,6 +7,7 @@
     //
 
 #import "SensorSettings.h"
+#define kSETTINGS_DICTIONARY        @"dictionarySettings"
 
 #define kUSING_BROADCAST            @"usingBroadcast"
 #define kTARGET_ADDRESS             @"targetAddress"
@@ -17,6 +18,9 @@
 #define kCAMERA_SENDING_DATA        @"cameraSendingData"
 #define kCAMERA_PORT                @"cameraPort"
 #define kUSING_FRONT_CAMERA         @"usingFrontCamera"
+
+#define vYES                        @"YES"
+#define vNO                         @"NO"
 
 @interface SensorSettings ()
 
@@ -47,13 +51,20 @@
 }
 
 -(void) updatePersistentState {
-    [self.defaults setBool:self.usingBroadcast forKey:kUSING_BROADCAST];
-    [self.defaults setObject:self.targetAddress forKey:kTARGET_ADDRESS];
-    [self.defaults setBool:self.accelerometerSendingData forKey:kACCELEROMETER_SENDING_DATA];
-    [self.defaults setInteger:self.accelerometerPort forKey:kACCELEROMETER_PORT];
-    [self.defaults setBool:self.cameraSendingData forKey:kCAMERA_SENDING_DATA];
-    [self.defaults setInteger:self.cameraPort forKey:kCAMERA_PORT];
-    [self.defaults setBool:self.usingFrontCamera forKey:kUSING_FRONT_CAMERA];
+    NSString* accSendDataString = (self.accelerometerSendingData ? vYES : vNO);
+    NSString* camSendDataString = (self.cameraSendingData ? vYES : vNO);
+    NSString* useFrontString = (self.usingFrontCamera ? vYES : vNO);
+
+    NSDictionary* settingsDictionary =
+    @{kUSING_BROADCAST: [NSString stringWithFormat:@"%c", self.usingBroadcast],
+      kTARGET_ADDRESS: self.targetAddress,
+      kACCELEROMETER_SENDING_DATA: accSendDataString,
+      kACCELEROMETER_PORT: [NSString stringWithFormat:@"%d", self.accelerometerPort],
+      kCAMERA_SENDING_DATA: camSendDataString,
+      kCAMERA_PORT: [NSString stringWithFormat:@"%d", self.cameraPort],
+      kUSING_FRONT_CAMERA: useFrontString};
+
+    [self.defaults setObject:settingsDictionary forKey:kSETTINGS_DICTIONARY];
     [self.defaults synchronize];
 }
 
@@ -61,20 +72,26 @@
     self = [super init];
     if (self) {
         if ([self hasPreviousState]) {
-            self.usingBroadcast = [self.defaults boolForKey:kUSING_BROADCAST];
-            self.targetAddress = [self.defaults stringForKey:kTARGET_ADDRESS];
-            self.accelerometerSendingData = [self.defaults boolForKey:kACCELEROMETER_SENDING_DATA];
-            self.accelerometerPort = [self.defaults integerForKey:kACCELEROMETER_PORT];
-            self.cameraSendingData = [self.defaults boolForKey:kCAMERA_SENDING_DATA];
-            self.cameraPort = [self.defaults integerForKey:kCAMERA_PORT];
-            self.usingFrontCamera = [self.defaults boolForKey:kUSING_FRONT_CAMERA];
+            NSDictionary* settingsDictionary = [self.defaults objectForKey:kSETTINGS_DICTIONARY];
+
+            self.usingBroadcast = [[settingsDictionary objectForKey:kUSING_BROADCAST] boolValue];
+            self.targetAddress = [settingsDictionary objectForKey:kTARGET_ADDRESS];
+            NSString* accSendDataString = [settingsDictionary objectForKey:kACCELEROMETER_SENDING_DATA];
+            self.accelerometerPort = [[settingsDictionary objectForKey:kACCELEROMETER_PORT] integerValue];
+            NSString* camSendDataString = [settingsDictionary objectForKey:kCAMERA_SENDING_DATA];
+            self.cameraPort = [[settingsDictionary objectForKey:kCAMERA_PORT] integerValue];
+            NSString* useFrontString = [settingsDictionary objectForKey:kUSING_FRONT_CAMERA];
+
+            self.accelerometerSendingData = ([accSendDataString isEqualToString:@"YES"] ? YES : NO);
+            self.cameraSendingData = ([camSendDataString isEqualToString:@"YES"] ? YES : NO);
+            self.usingFrontCamera = ([useFrontString isEqualToString:@"YES"] ? YES : NO);
         }
     }
     return self;
 }
 
 -(BOOL) hasPreviousState {
-    return ([self.defaults objectForKey:kTARGET_ADDRESS] != nil);
+    return ([self.defaults objectForKey:kSETTINGS_DICTIONARY] != nil);
 }
 
 
@@ -87,47 +104,12 @@
     return _defaults;
 }
 
--(void) setUsingBroadcast:(BOOL)usingBroadcast {
-    _usingBroadcast = usingBroadcast;
-
-    [self updatePersistentState];
-}
-
--(void) setTargetAddress:(NSString* )targetAddress {
-
-    _targetAddress = targetAddress;
-
-    [self updatePersistentState];
-}
-
--(void) setAccelerometerSendingData:(BOOL)accelerometerSendingData {
-    _accelerometerSendingData = accelerometerSendingData;
-
-    [self updatePersistentState];
-}
-
--(void) setAccelerometerPort:(NSInteger)accelerometerPort {
-    _accelerometerPort = accelerometerPort;
-
-    [self updatePersistentState];
-}
-
--(void) setCameraSendingData:(BOOL)cameraSendingData {
-    _cameraSendingData = cameraSendingData;
-
-    [self updatePersistentState];
-}
-
--(void) setCameraPort:(NSInteger)cameraPort {
-    _cameraPort = cameraPort;
-
-    [self updatePersistentState];
-}
-
--(void) setUsingFrontCamera:(BOOL)usingFrontCamera {
-    _usingFrontCamera = usingFrontCamera;
-    
-    [self updatePersistentState];
+-(NSString* )targetAddress {
+    if (!_targetAddress) {
+            //Serves as default "Unicast address"
+        _targetAddress = @"192.168.x.x";
+    }
+    return _targetAddress;
 }
 
 #pragma mark -

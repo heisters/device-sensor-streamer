@@ -29,6 +29,7 @@
 
 -(id) initWithPreviousStateIfPossible;
 -(BOOL) hasPreviousState;
+-(void) updatePersistentState;
 
 #pragma mark -
 @end

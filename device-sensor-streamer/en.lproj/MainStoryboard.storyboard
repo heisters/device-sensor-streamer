@@ -210,11 +210,11 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="255.255.255.255" borderStyle="roundedRect" minimumFontSize="17" id="BkN-x1-FLd">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="255.255.255.255" minimumFontSize="17" id="BkN-x1-FLd">
                                                     <rect key="frame" x="108" y="7" width="172" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                                     <connections>
                                                         <action selector="settingsChanged" destination="xKT-aB-GEt" eventType="editingDidEnd" id="75I-fP-O31"/>
@@ -432,22 +432,6 @@
         <image name="network.png" width="32" height="32"/>
         <image name="webcam-icon.png" width="30" height="30"/>
     </resources>
-    <classes>
-        <class className="SensorSettingsController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SensorSettingsController.h"/>
-            <relationships>
-                <relationship kind="action" name="settingsChanged"/>
-                <relationship kind="action" name="udpModeChanged:" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="accelerometerPort" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="cameraPort" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="cameraSource" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="shouldSendAccelerometerData" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="shouldSendCameraData" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="targetAddress" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="udpMode" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

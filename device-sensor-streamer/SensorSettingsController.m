@@ -39,6 +39,9 @@
         self.cameraPort.text = [NSString stringWithFormat:@"%d", self.sensorSettings.cameraPort];
         BOOL usingFront = self.sensorSettings.isUsingFrontCamera;
         self.cameraSource.selectedSegmentIndex = (usingFront ? 0 : 1);
+
+            // Update states of segment buttons
+        [self udpModeChanged:self.udpMode];
     }
 }
 
@@ -47,11 +50,13 @@
     switch ([sender selectedSegmentIndex]) {
         case 0:
             self.targetAddress.enabled = YES;
-            self.targetAddress.textColor = [UIColor blackColor];
+                // Return text to what it was set
+            self.targetAddress.text = self.sensorSettings.targetAddress;
             break;
         case 1:
             self.targetAddress.enabled = NO;
-            self.targetAddress.textColor = [UIColor darkGrayColor];
+                // Allow placeholder text to "show" thru
+            self.targetAddress.text = @"";
         default:
             break;
     }
@@ -62,6 +67,7 @@
 - (IBAction)settingsChanged {
         // store to database, and apply to running models
     [self storeInput];
+    
 }
 
 #pragma mark -
@@ -85,7 +91,10 @@
     self.sensorSettings.accelerometerSendingData = sendAccelerometerData;
     self.sensorSettings.cameraSendingData = sendCameraData;
     self.sensorSettings.usingFrontCamera = cameraFront;
-    self.sensorSettings.targetAddress = address;
+    if (!usingBroadcast) {
+            // Treat broadcast as special case: keep current value
+        self.sensorSettings.targetAddress = address;
+    }
         // Set settings that require internal validation
     if ([self.sensorSettings setAccelerometerPortWithString:accelerometerPort]) {
         self.accelerometerPort.backgroundColor = [UIColor whiteColor];
@@ -98,6 +107,8 @@
     } else {
         self.cameraPort.backgroundColor = [UIColor redColor];
     }
+
+    [self.sensorSettings updatePersistentState];
 }
 
 #pragma mark -
