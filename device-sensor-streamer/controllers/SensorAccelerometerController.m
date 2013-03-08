@@ -11,6 +11,13 @@
     // number is in hz
 #define vACCELEROMETER_RATE     50
 
+@interface SensorAccelerometerController ()
+
+    //@property (nonatomic, strong);
+
+@end
+
+
 @implementation SensorAccelerometerController
 
 - (void)viewDidLoad {
