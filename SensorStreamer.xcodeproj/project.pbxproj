@@ -17,15 +17,15 @@
 		9A7F401716E2E6DF00DDBE40 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F401516E2E6DF00DDBE40 /* MainStoryboard.storyboard */; };
 		9AB4EB1E16E9CFD0004F13B5 /* AccelerometerSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB1D16E9CFD0004F13B5 /* AccelerometerSender.m */; };
 		9AB4EB2716E9D055004F13B5 /* acceleration.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB1F16E9D055004F13B5 /* acceleration.png */; };
-		9AB4EB2816E9D055004F13B5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB2016E9D055004F13B5 /* Default-568h@2x.png */; };
-		9AB4EB2916E9D055004F13B5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB2116E9D055004F13B5 /* Default.png */; };
-		9AB4EB2A16E9D055004F13B5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB2216E9D055004F13B5 /* Default@2x.png */; };
-		9AB4EB2B16E9D055004F13B5 /* icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB2316E9D055004F13B5 /* icon-retina.png */; };
-		9AB4EB2C16E9D055004F13B5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB2416E9D055004F13B5 /* icon.png */; };
 		9AB4EB2D16E9D055004F13B5 /* network.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB2516E9D055004F13B5 /* network.png */; };
 		9AB4EB2E16E9D055004F13B5 /* webcam-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB2616E9D055004F13B5 /* webcam-icon.png */; };
 		9AB4EB3416E9D07F004F13B5 /* SensorAccelerometerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3116E9D07F004F13B5 /* SensorAccelerometerController.m */; };
 		9AB4EB3516E9D07F004F13B5 /* SensorSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3316E9D07F004F13B5 /* SensorSettingsController.m */; };
+		9AB4EB3716E9D1F4004F13B5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3616E9D1F3004F13B5 /* Default-568h@2x.png */; };
+		9AB4EB3916E9D20B004F13B5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3816E9D20B004F13B5 /* Default@2x.png */; };
+		9AB4EB3B16E9D215004F13B5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3A16E9D214004F13B5 /* Default.png */; };
+		9AB4EB3D16E9D231004F13B5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3C16E9D231004F13B5 /* icon.png */; };
+		9AB4EB3F16E9D23D004F13B5 /* icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3E16E9D23D004F13B5 /* icon-retina.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,17 +47,17 @@
 		9AB4EB1C16E9CFD0004F13B5 /* AccelerometerSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccelerometerSender.h; path = models/AccelerometerSender.h; sourceTree = "<group>"; };
 		9AB4EB1D16E9CFD0004F13B5 /* AccelerometerSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccelerometerSender.m; path = models/AccelerometerSender.m; sourceTree = "<group>"; };
 		9AB4EB1F16E9D055004F13B5 /* acceleration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = acceleration.png; path = images/acceleration.png; sourceTree = "<group>"; };
-		9AB4EB2016E9D055004F13B5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "images/Default-568h@2x.png"; sourceTree = "<group>"; };
-		9AB4EB2116E9D055004F13B5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/Default.png; sourceTree = "<group>"; };
-		9AB4EB2216E9D055004F13B5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "images/Default@2x.png"; sourceTree = "<group>"; };
-		9AB4EB2316E9D055004F13B5 /* icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-retina.png"; path = "images/icon-retina.png"; sourceTree = "<group>"; };
-		9AB4EB2416E9D055004F13B5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = images/icon.png; sourceTree = "<group>"; };
 		9AB4EB2516E9D055004F13B5 /* network.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = network.png; path = images/network.png; sourceTree = "<group>"; };
 		9AB4EB2616E9D055004F13B5 /* webcam-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "webcam-icon.png"; path = "images/webcam-icon.png"; sourceTree = "<group>"; };
 		9AB4EB3016E9D07F004F13B5 /* SensorAccelerometerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorAccelerometerController.h; sourceTree = "<group>"; };
 		9AB4EB3116E9D07F004F13B5 /* SensorAccelerometerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorAccelerometerController.m; sourceTree = "<group>"; };
 		9AB4EB3216E9D07F004F13B5 /* SensorSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorSettingsController.h; sourceTree = "<group>"; };
 		9AB4EB3316E9D07F004F13B5 /* SensorSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorSettingsController.m; sourceTree = "<group>"; };
+		9AB4EB3616E9D1F3004F13B5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		9AB4EB3816E9D20B004F13B5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		9AB4EB3A16E9D214004F13B5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		9AB4EB3C16E9D231004F13B5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		9AB4EB3E16E9D23D004F13B5 /* icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-retina.png"; path = "../icon-retina.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				9A7F400316E2E6DF00DDBE40 /* device-sensor-streamer */,
-				9A7F401516E2E6DF00DDBE40 /* MainStoryboard.storyboard */,
 				9A7F3FFC16E2E6DF00DDBE40 /* Frameworks */,
 				9A7F3FFB16E2E6DF00DDBE40 /* Products */,
 			);
@@ -117,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				9AB4EB2F16E9D07F004F13B5 /* Controllers */,
+				9A7F401516E2E6DF00DDBE40 /* MainStoryboard.storyboard */,
 				9A29D20116E3D951005519C6 /* Models */,
 				9A7F400416E2E6DF00DDBE40 /* Supporting Files */,
 				9A7F403316E3018700DDBE40 /* Images */,
@@ -142,12 +142,12 @@
 		9A7F403316E3018700DDBE40 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9AB4EB3E16E9D23D004F13B5 /* icon-retina.png */,
+				9AB4EB3C16E9D231004F13B5 /* icon.png */,
+				9AB4EB3A16E9D214004F13B5 /* Default.png */,
+				9AB4EB3816E9D20B004F13B5 /* Default@2x.png */,
+				9AB4EB3616E9D1F3004F13B5 /* Default-568h@2x.png */,
 				9AB4EB1F16E9D055004F13B5 /* acceleration.png */,
-				9AB4EB2016E9D055004F13B5 /* Default-568h@2x.png */,
-				9AB4EB2116E9D055004F13B5 /* Default.png */,
-				9AB4EB2216E9D055004F13B5 /* Default@2x.png */,
-				9AB4EB2316E9D055004F13B5 /* icon-retina.png */,
-				9AB4EB2416E9D055004F13B5 /* icon.png */,
 				9AB4EB2516E9D055004F13B5 /* network.png */,
 				9AB4EB2616E9D055004F13B5 /* webcam-icon.png */,
 			);
@@ -221,13 +221,13 @@
 				9A7F400816E2E6DF00DDBE40 /* InfoPlist.strings in Resources */,
 				9A7F401716E2E6DF00DDBE40 /* MainStoryboard.storyboard in Resources */,
 				9AB4EB2716E9D055004F13B5 /* acceleration.png in Resources */,
-				9AB4EB2816E9D055004F13B5 /* Default-568h@2x.png in Resources */,
-				9AB4EB2916E9D055004F13B5 /* Default.png in Resources */,
-				9AB4EB2A16E9D055004F13B5 /* Default@2x.png in Resources */,
-				9AB4EB2B16E9D055004F13B5 /* icon-retina.png in Resources */,
-				9AB4EB2C16E9D055004F13B5 /* icon.png in Resources */,
 				9AB4EB2D16E9D055004F13B5 /* network.png in Resources */,
 				9AB4EB2E16E9D055004F13B5 /* webcam-icon.png in Resources */,
+				9AB4EB3716E9D1F4004F13B5 /* Default-568h@2x.png in Resources */,
+				9AB4EB3916E9D20B004F13B5 /* Default@2x.png in Resources */,
+				9AB4EB3B16E9D215004F13B5 /* Default.png in Resources */,
+				9AB4EB3D16E9D231004F13B5 /* icon.png in Resources */,
+				9AB4EB3F16E9D23D004F13B5 /* icon-retina.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +264,6 @@
 				9A7F401616E2E6DF00DDBE40 /* en */,
 			);
 			name = MainStoryboard.storyboard;
-			path = "device-sensor-streamer";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
