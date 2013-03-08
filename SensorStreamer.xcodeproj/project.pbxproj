@@ -24,6 +24,7 @@
 		9A7F402B16E2F65D00DDBE40 /* network.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F402916E2F65D00DDBE40 /* network.png */; };
 		9A7F402F16E2F91000DDBE40 /* webcam-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F402E16E2F91000DDBE40 /* webcam-icon.png */; };
 		9A7F403616E3024900DDBE40 /* SensorSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7F403516E3024900DDBE40 /* SensorSettingsController.m */; };
+		9AB4EB1B16E9C6F9004F13B5 /* SensorAccelerometerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB1A16E9C6F9004F13B5 /* SensorAccelerometerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		9A7F402E16E2F91000DDBE40 /* webcam-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "webcam-icon.png"; sourceTree = "<group>"; };
 		9A7F403416E3024900DDBE40 /* SensorSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorSettingsController.h; sourceTree = "<group>"; };
 		9A7F403516E3024900DDBE40 /* SensorSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorSettingsController.m; sourceTree = "<group>"; };
+		9AB4EB1916E9C6F9004F13B5 /* SensorAccelerometerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorAccelerometerController.h; sourceTree = "<group>"; };
+		9AB4EB1A16E9C6F9004F13B5 /* SensorAccelerometerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorAccelerometerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				9A7F401516E2E6DF00DDBE40 /* MainStoryboard.storyboard */,
+				9AB4EB1916E9C6F9004F13B5 /* SensorAccelerometerController.h */,
+				9AB4EB1A16E9C6F9004F13B5 /* SensorAccelerometerController.m */,
 				9A7F403416E3024900DDBE40 /* SensorSettingsController.h */,
 				9A7F403516E3024900DDBE40 /* SensorSettingsController.m */,
 				9A29D20116E3D951005519C6 /* Models */,
@@ -223,6 +228,7 @@
 				9A7F400E16E2E6DF00DDBE40 /* SensorAppDelegate.m in Sources */,
 				9A7F403616E3024900DDBE40 /* SensorSettingsController.m in Sources */,
 				9A29D20016E3D94C005519C6 /* SensorSettings.m in Sources */,
+				9AB4EB1B16E9C6F9004F13B5 /* SensorAccelerometerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
