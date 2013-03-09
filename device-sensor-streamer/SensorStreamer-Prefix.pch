@@ -12,3 +12,6 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+    // number is in hz
+#define vACCELEROMETER_RATE     50
