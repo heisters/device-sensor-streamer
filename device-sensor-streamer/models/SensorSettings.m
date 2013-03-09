@@ -7,6 +7,7 @@
     //
 
 #import "SensorSettings.h"
+
 #define kSETTINGS_DICTIONARY        @"dictionarySettings"
 
 #define kUSING_BROADCAST            @"usingBroadcast"

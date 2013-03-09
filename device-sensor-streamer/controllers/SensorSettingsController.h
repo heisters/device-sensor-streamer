@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SensorSettings.h"
 
 @interface SensorSettingsController : UITableViewController<UITextFieldDelegate>
 #pragma mark Actions

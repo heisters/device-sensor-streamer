@@ -7,7 +7,6 @@
     //
 
 #import "SensorSettingsController.h"
-#import "SensorSettings.h"
 
 @interface SensorSettingsController()
 

@@ -8,22 +8,12 @@
 
 #import "SensorAccelerometerController.h"
 
-    // number is in hz
-#define vACCELEROMETER_RATE     50
-
-@interface SensorAccelerometerController ()
-
-    //@property (nonatomic, strong);
-
-@end
-
-
 @implementation SensorAccelerometerController
 
 - (void)viewDidLoad {
-    UIAccelerometer* accelerometer = [UIAccelerometer sharedAccelerometer];
-    accelerometer.updateInterval = 1 / vACCELEROMETER_RATE;
-    accelerometer.delegate = self;
+    AccelerometerSender* sender = [AccelerometerSender sharedSender];
+    sender.delegate = self;
+    sender.settings = [[SensorSettings alloc] initWithPreviousStateIfPossible];
 }
 
     // Using deprecated methods in a pinch. ssh...
