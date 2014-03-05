@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AccelerometerSender.h"
 
-@interface SensorAccelerometerController : UITableViewController<UIAccelerometerDelegate>
+@interface SensorAccelerometerController : UITableViewController< MotionDelegate >
 @property (weak, nonatomic) IBOutlet UISlider *sX;
 @property (weak, nonatomic) IBOutlet UISlider *sY;
 @property (weak, nonatomic) IBOutlet UISlider *sZ;

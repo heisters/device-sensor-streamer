@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C36A8F418C7DD7600D13CAF /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C36A8F318C7DD7600D13CAF /* CoreMotion.framework */; };
 		9A1B804B16EABA1A00941540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B804616EABA1A00941540 /* main.m */; };
 		9A1B804C16EABA1A00941540 /* SensorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B804816EABA1A00941540 /* SensorAppDelegate.m */; };
 		9A1B805C16EAD10D00941540 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B805716EAC28000941540 /* GCDAsyncUdpSocket.m */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C36A8F318C7DD7600D13CAF /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		9A1B804616EABA1A00941540 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = support/main.m; sourceTree = "<group>"; };
 		9A1B804716EABA1A00941540 /* SensorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorAppDelegate.h; path = support/SensorAppDelegate.h; sourceTree = "<group>"; };
 		9A1B804816EABA1A00941540 /* SensorAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorAppDelegate.m; path = support/SensorAppDelegate.m; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C36A8F418C7DD7600D13CAF /* CoreMotion.framework in Frameworks */,
 				9A7F3FFE16E2E6DF00DDBE40 /* UIKit.framework in Frameworks */,
 				9A7F400016E2E6DF00DDBE40 /* Foundation.framework in Frameworks */,
 				9A7F400216E2E6DF00DDBE40 /* CoreGraphics.framework in Frameworks */,
@@ -115,6 +118,7 @@
 		9A7F3FFC16E2E6DF00DDBE40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C36A8F318C7DD7600D13CAF /* CoreMotion.framework */,
 				9A7F3FFD16E2E6DF00DDBE40 /* UIKit.framework */,
 				9A7F3FFF16E2E6DF00DDBE40 /* Foundation.framework */,
 				9A7F400116E2E6DF00DDBE40 /* CoreGraphics.framework */,

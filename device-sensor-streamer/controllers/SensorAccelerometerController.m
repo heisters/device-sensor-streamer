@@ -16,16 +16,29 @@
     sender.settings = [[SensorSettings alloc] initWithPreviousStateIfPossible];
 }
 
-    // Using deprecated methods in a pinch. ssh...
-- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 
-    self.sX.value = acceleration.x;
-    self.sY.value = acceleration.y;
-    self.sZ.value = acceleration.z;
+    [[AccelerometerSender sharedSender] start];
+}
 
-    self.rX.text = [NSString stringWithFormat:@"X: %.2f G's",acceleration.x];
-    self.rY.text = [NSString stringWithFormat:@"Y: %.2f G's",acceleration.y];
-    self.rZ.text = [NSString stringWithFormat:@"Z: %.2f G's",acceleration.z];
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+
+    [[AccelerometerSender sharedSender] stop];
+}
+
+- (void)didAccelerate:(CMAccelerometerData *)data error:(NSError *)error
+{
+    self.sX.value = data.acceleration.x;
+    self.sY.value = data.acceleration.y;
+    self.sZ.value = data.acceleration.z;
+
+    self.rX.text = [NSString stringWithFormat:@"X: %.2f G's", data.acceleration.x];
+    self.rY.text = [NSString stringWithFormat:@"Y: %.2f G's", data.acceleration.y];
+    self.rZ.text = [NSString stringWithFormat:@"Z: %.2f G's", data.acceleration.z];
 }
 
 - (void)viewDidUnload {

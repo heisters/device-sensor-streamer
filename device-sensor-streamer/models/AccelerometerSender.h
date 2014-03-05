@@ -7,13 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreMotion/CoreMotion.h>
 #import "SensorSettings.h"
 #import "GCDAsyncUdpSocket.h"
 
-@interface AccelerometerSender : NSObject<UIAccelerometerDelegate>
+@protocol MotionDelegate <NSObject>
+@optional
+- (void)didAccelerate:(CMAccelerometerData *)data error:(NSError *)error;
+- (void)didGyrate:(CMGyroData *)data error:(NSError *)error;
+- (void)didMove:(CMDeviceMotion *)data error:(NSError *)error;
+@end
+
+@interface AccelerometerSender : NSObject
 
 @property (nonatomic, strong) SensorSettings* settings;
-@property (nonatomic, weak) id<UIAccelerometerDelegate> delegate;
+@property (nonatomic, weak) id<MotionDelegate> delegate;
 + (AccelerometerSender* )sharedSender;
-
+- (void)start;
+- (void)stop;
 @end
