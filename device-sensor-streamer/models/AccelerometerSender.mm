@@ -7,16 +7,18 @@
     //
 
 #import "AccelerometerSender.h"
+#import <OSCPack.h>
 
 @interface AccelerometerSender ()
 
-@property (nonatomic, strong) GCDAsyncUdpSocket* socket;
+@property (nonatomic, strong) OSCPackSender *osc;
 @property (nonatomic) BOOL hasConnected;
 @property (nonatomic) BOOL isRunning;
 @property (nonatomic, strong) CMMotionManager *motionManager;
 @property (nonatomic, strong) NSOperationQueue *deviceQueue;
 @property (nonatomic, strong) NSOperationQueue *accelQueue;
 @property (nonatomic, strong) NSOperationQueue *gyroQueue;
+@property (nonatomic, strong) NSString *deviceId;
 @end
 
 @implementation AccelerometerSender
@@ -26,6 +28,11 @@
     self = [super init];
     if ( self ) {
         self.isRunning = NO;
+
+        self.osc = [[OSCPackSender alloc] initWithHost:self.settings.targetAddress port:self.settings.accelerometerPort];
+        [self.osc enableBroadcast];
+
+        self.deviceId = [[UIDevice currentDevice] name];
 
         self.motionManager = [CMMotionManager new];
         self.motionManager.deviceMotionUpdateInterval = 1.0 / vACCELEROMETER_RATE;
@@ -47,8 +54,6 @@
 - (void)start
 {
     if ( self.isRunning ) return;
-
-    [self connect];
 
     CMDeviceMotionHandler motionHandler = ^(CMDeviceMotion *motion, NSError *error) {
         [self didMove:motion error:error];
@@ -82,32 +87,16 @@
     [self.motionManager stopGyroUpdates];
     [self.gyroQueue waitUntilAllOperationsAreFinished];
 
-    [self.socket closeAfterSending];
+    [self.osc close];
 
     self.isRunning = NO;
 }
 
-- (void)connect
-{
-    if ( [self.socket isClosed] ) self.hasConnected = NO;
-
-    if (!self.hasConnected) {
-        NSError* err = nil;
-        if (![self.socket connectToHost:self.settings.targetAddress onPort:self.settings.accelerometerPort error:&err])
-        {
-            NSLog(@"Socket Error: %@", err);
-        }
-        self.hasConnected = YES;
-    }
-}
-
 - (void)didMove:(CMDeviceMotion *)data error:(NSError *)error
 {
-    double x = data.userAcceleration.x;
-    double y = data.userAcceleration.y;
-    double z = data.userAcceleration.z;
-
-    [self sendData:@"USER_ACCEL" data:[NSString stringWithFormat:@"%f:%f:%f", x, y, z]];
+    [[[[[self.message to:@"/accel"]
+        addFloat:data.userAcceleration.x] addFloat:data.userAcceleration.y] addFloat:data.userAcceleration.z]
+     send];
 
     if ( [self.delegate respondsToSelector:@selector(didMove:error:)] )
         [self.delegate didMove:data error:error];
@@ -115,11 +104,9 @@
 
 - (void)didAccel:(CMAccelerometerData *)data error:(NSError *)error
 {
-    double x = data.acceleration.x;
-    double y = data.acceleration.y;
-    double z = data.acceleration.z;
-
-    [self sendData:@"ACCEL" data:[NSString stringWithFormat:@"%f:%f:%f", x, y, z]];
+    [[[[[self.message to:@"/accel"]
+        addFloat:data.acceleration.x] addFloat:data.acceleration.y] addFloat:data.acceleration.z]
+     send];
 
     if ( [self.delegate respondsToSelector:@selector(didAccelerate:error:)] )
         [self.delegate didAccelerate:data error:error];
@@ -127,37 +114,17 @@
 
 - (void)didGyro:(CMGyroData *)data error:(NSError *)error
 {
-    double x = data.rotationRate.x;
-    double y = data.rotationRate.y;
-    double z = data.rotationRate.z;
-
-    [self sendData:@"GYRO" data:[NSString stringWithFormat:@"%f:%f:%f", x, y, z]];
+    [[[[[self.message to:@"/gyro"]
+       addFloat:data.rotationRate.x] addFloat:data.rotationRate.y] addFloat:data.rotationRate.z]
+     send];
 
     if ( [self.delegate respondsToSelector:@selector(didGyrate:error:)] )
         [self.delegate didGyrate:data error:error];
 }
 
-- (void)sendData:(NSString *)label data:(NSString *)data
+- (OSCPackMessageBuilder *)message
 {
-    NSString *packet = [NSString stringWithFormat:@"%@:%@:%@", [self packetHeader], label, data];
-    [self.socket sendData:[packet dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:0];
-}
-
-- (NSString *)packetHeader {
-    NSString* uuid = [[UIDevice currentDevice] name];
-    NSTimeInterval now = [[NSDate date] timeIntervalSince1970];
-    return [NSString stringWithFormat:@"AccSend1.0:%@:%.0f", uuid, now];
-}
-
-#pragma mark -
-#pragma mark Property methods
-
--(GCDAsyncUdpSocket* )socket {
-    if (!_socket) {
-        _socket = [[GCDAsyncUdpSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
-    }
-
-    return _socket;
+    return [[self.osc message] add:self.deviceId];
 }
 
 #pragma mark -

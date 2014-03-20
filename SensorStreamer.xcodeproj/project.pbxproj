@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C01B4C818DB77EC0044D432 /* libiOS-oscpack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C01B4C018DB6E4B0044D432 /* libiOS-oscpack.a */; };
 		3C36A8F418C7DD7600D13CAF /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C36A8F318C7DD7600D13CAF /* CoreMotion.framework */; };
 		9A1B804B16EABA1A00941540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B804616EABA1A00941540 /* main.m */; };
 		9A1B804C16EABA1A00941540 /* SensorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B804816EABA1A00941540 /* SensorAppDelegate.m */; };
-		9A1B805C16EAD10D00941540 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B805716EAC28000941540 /* GCDAsyncUdpSocket.m */; };
 		9A29D20016E3D94C005519C6 /* SensorSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29D1FF16E3D94C005519C6 /* SensorSettings.m */; };
 		9A7F3FFE16E2E6DF00DDBE40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7F3FFD16E2E6DF00DDBE40 /* UIKit.framework */; };
 		9A7F400016E2E6DF00DDBE40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7F3FFF16E2E6DF00DDBE40 /* Foundation.framework */; };
 		9A7F400216E2E6DF00DDBE40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7F400116E2E6DF00DDBE40 /* CoreGraphics.framework */; };
 		9A7F400816E2E6DF00DDBE40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F400616E2E6DF00DDBE40 /* InfoPlist.strings */; };
 		9A7F401716E2E6DF00DDBE40 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F401516E2E6DF00DDBE40 /* MainStoryboard.storyboard */; };
-		9AB4EB1E16E9CFD0004F13B5 /* AccelerometerSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB1D16E9CFD0004F13B5 /* AccelerometerSender.m */; };
+		9AB4EB1E16E9CFD0004F13B5 /* AccelerometerSender.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB1D16E9CFD0004F13B5 /* AccelerometerSender.mm */; };
 		9AB4EB2716E9D055004F13B5 /* acceleration.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB1F16E9D055004F13B5 /* acceleration.png */; };
 		9AB4EB2D16E9D055004F13B5 /* network.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB2516E9D055004F13B5 /* network.png */; };
 		9AB4EB2E16E9D055004F13B5 /* webcam-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB2616E9D055004F13B5 /* webcam-icon.png */; };
@@ -30,13 +30,36 @@
 		9AB4EB3F16E9D23D004F13B5 /* icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3E16E9D23D004F13B5 /* icon-retina.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3C01B4BF18DB6E4B0044D432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C01B4BA18DB6E4B0044D432 /* iOS-oscpack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C01B43618DA1C720044D432;
+			remoteInfo = "iOS-oscpack";
+		};
+		3C01B4C118DB6E4B0044D432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C01B4BA18DB6E4B0044D432 /* iOS-oscpack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3C01B44618DA1C720044D432;
+			remoteInfo = "iOS-oscpackTests";
+		};
+		3C01B4C618DB77D00044D432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C01B4BA18DB6E4B0044D432 /* iOS-oscpack.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C01B43518DA1C720044D432;
+			remoteInfo = "iOS-oscpack";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3C01B4BA18DB6E4B0044D432 /* iOS-oscpack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "iOS-oscpack.xcodeproj"; path = "../iOS-oscpack/iOS-oscpack.xcodeproj"; sourceTree = "<group>"; };
 		3C36A8F318C7DD7600D13CAF /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		9A1B804616EABA1A00941540 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = support/main.m; sourceTree = "<group>"; };
 		9A1B804716EABA1A00941540 /* SensorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorAppDelegate.h; path = support/SensorAppDelegate.h; sourceTree = "<group>"; };
 		9A1B804816EABA1A00941540 /* SensorAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorAppDelegate.m; path = support/SensorAppDelegate.m; sourceTree = "<group>"; };
-		9A1B805616EAC28000941540 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = support/sockets/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		9A1B805716EAC28000941540 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = support/sockets/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		9A1B805816EACC0200941540 /* SensorStreamer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SensorStreamer-Info.plist"; sourceTree = "<group>"; };
 		9A1B805A16EACC3D00941540 /* SensorStreamer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SensorStreamer-Prefix.pch"; sourceTree = "<group>"; };
 		9A29D1FE16E3D94C005519C6 /* SensorSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorSettings.h; path = models/SensorSettings.h; sourceTree = "<group>"; };
@@ -48,7 +71,7 @@
 		9A7F400716E2E6DF00DDBE40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A7F401616E2E6DF00DDBE40 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9AB4EB1C16E9CFD0004F13B5 /* AccelerometerSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccelerometerSender.h; path = models/AccelerometerSender.h; sourceTree = "<group>"; };
-		9AB4EB1D16E9CFD0004F13B5 /* AccelerometerSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccelerometerSender.m; path = models/AccelerometerSender.m; sourceTree = "<group>"; };
+		9AB4EB1D16E9CFD0004F13B5 /* AccelerometerSender.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AccelerometerSender.mm; path = models/AccelerometerSender.mm; sourceTree = "<group>"; };
 		9AB4EB1F16E9D055004F13B5 /* acceleration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = acceleration.png; path = images/acceleration.png; sourceTree = "<group>"; };
 		9AB4EB2516E9D055004F13B5 /* network.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = network.png; path = images/network.png; sourceTree = "<group>"; };
 		9AB4EB2616E9D055004F13B5 /* webcam-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "webcam-icon.png"; path = "images/webcam-icon.png"; sourceTree = "<group>"; };
@@ -68,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C01B4C818DB77EC0044D432 /* libiOS-oscpack.a in Frameworks */,
 				3C36A8F418C7DD7600D13CAF /* CoreMotion.framework in Frameworks */,
 				9A7F3FFE16E2E6DF00DDBE40 /* UIKit.framework in Frameworks */,
 				9A7F400016E2E6DF00DDBE40 /* Foundation.framework in Frameworks */,
@@ -78,20 +102,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9A1B804516EAB99000941540 /* Sockets */ = {
+		3C01B4BB18DB6E4B0044D432 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A1B805616EAC28000941540 /* GCDAsyncUdpSocket.h */,
-				9A1B805716EAC28000941540 /* GCDAsyncUdpSocket.m */,
+				3C01B4C018DB6E4B0044D432 /* libiOS-oscpack.a */,
+				3C01B4C218DB6E4B0044D432 /* iOS-oscpackTests.xctest */,
 			);
-			name = Sockets;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		9A29D20116E3D951005519C6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				9AB4EB1C16E9CFD0004F13B5 /* AccelerometerSender.h */,
-				9AB4EB1D16E9CFD0004F13B5 /* AccelerometerSender.m */,
+				9AB4EB1D16E9CFD0004F13B5 /* AccelerometerSender.mm */,
 				9A29D1FE16E3D94C005519C6 /* SensorSettings.h */,
 				9A29D1FF16E3D94C005519C6 /* SensorSettings.m */,
 			);
@@ -101,6 +125,7 @@
 		9A7F3FF116E2E6DF00DDBE40 = {
 			isa = PBXGroup;
 			children = (
+				3C01B4BA18DB6E4B0044D432 /* iOS-oscpack.xcodeproj */,
 				9A7F400316E2E6DF00DDBE40 /* device-sensor-streamer */,
 				9A7F3FFC16E2E6DF00DDBE40 /* Frameworks */,
 				9A7F3FFB16E2E6DF00DDBE40 /* Products */,
@@ -141,7 +166,6 @@
 		9A7F400416E2E6DF00DDBE40 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9A1B804516EAB99000941540 /* Sockets */,
 				9A7F400616E2E6DF00DDBE40 /* InfoPlist.strings */,
 				9A1B804616EABA1A00941540 /* main.m */,
 				9A1B804716EABA1A00941540 /* SensorAppDelegate.h */,
@@ -193,6 +217,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3C01B4C718DB77D00044D432 /* PBXTargetDependency */,
 			);
 			name = SensorStreamer;
 			productName = "device-sensor-streamer";
@@ -219,12 +244,35 @@
 			mainGroup = 9A7F3FF116E2E6DF00DDBE40;
 			productRefGroup = 9A7F3FFB16E2E6DF00DDBE40 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3C01B4BB18DB6E4B0044D432 /* Products */;
+					ProjectRef = 3C01B4BA18DB6E4B0044D432 /* iOS-oscpack.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9A7F3FF916E2E6DF00DDBE40 /* SensorStreamer */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3C01B4C018DB6E4B0044D432 /* libiOS-oscpack.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libiOS-oscpack.a";
+			remoteRef = 3C01B4BF18DB6E4B0044D432 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3C01B4C218DB6E4B0044D432 /* iOS-oscpackTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "iOS-oscpackTests.xctest";
+			remoteRef = 3C01B4C118DB6E4B0044D432 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9A7F3FF816E2E6DF00DDBE40 /* Resources */ = {
@@ -251,9 +299,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A1B805C16EAD10D00941540 /* GCDAsyncUdpSocket.m in Sources */,
 				9A29D20016E3D94C005519C6 /* SensorSettings.m in Sources */,
-				9AB4EB1E16E9CFD0004F13B5 /* AccelerometerSender.m in Sources */,
+				9AB4EB1E16E9CFD0004F13B5 /* AccelerometerSender.mm in Sources */,
 				9AB4EB3416E9D07F004F13B5 /* SensorAccelerometerController.m in Sources */,
 				9AB4EB3516E9D07F004F13B5 /* SensorSettingsController.m in Sources */,
 				9A1B804B16EABA1A00941540 /* main.m in Sources */,
@@ -262,6 +309,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C01B4C718DB77D00044D432 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "iOS-oscpack";
+			targetProxy = 3C01B4C618DB77D00044D432 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9A7F400616E2E6DF00DDBE40 /* InfoPlist.strings */ = {
@@ -342,10 +397,16 @@
 		9A7F401E16E2E6E000DDBE40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "device-sensor-streamer/SensorStreamer-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../iOS-oscpack/**",
+				);
 				INFOPLIST_FILE = "device-sensor-streamer/SensorStreamer-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = SensorStreamer;
 				WRAPPER_EXTENSION = app;
 			};
@@ -354,10 +415,16 @@
 		9A7F401F16E2E6E000DDBE40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "device-sensor-streamer/SensorStreamer-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../iOS-oscpack/**",
+				);
 				INFOPLIST_FILE = "device-sensor-streamer/SensorStreamer-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = SensorStreamer;
 				WRAPPER_EXTENSION = app;
 			};

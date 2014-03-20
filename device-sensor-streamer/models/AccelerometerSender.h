@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreMotion/CoreMotion.h>
 #import "SensorSettings.h"
-#import "GCDAsyncUdpSocket.h"
 
 @protocol MotionDelegate <NSObject>
 @optional

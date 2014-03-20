@@ -33,7 +33,7 @@
 
 -(BOOL) setAccelerometerPortWithString:(NSString* )string {
     NSInteger port = [string integerValue];
-    if ([[NSString stringWithFormat:@"%d", port] isEqualToString:string]) {
+    if ([[NSString stringWithFormat:@"%ld", (long)port] isEqualToString:string]) {
         self.accelerometerPort = port;
         return YES;
     } else {
@@ -43,7 +43,7 @@
 
 -(BOOL) setCameraPortWithString:(NSString* )string {
     NSInteger port = [string integerValue];
-    if ([[NSString stringWithFormat:@"%d", port] isEqualToString:string]) {
+    if ([[NSString stringWithFormat:@"%ld", (long)port] isEqualToString:string]) {
         self.cameraPort = port;
         return YES;
     } else {
@@ -60,9 +60,9 @@
     @{kUSING_BROADCAST: [NSString stringWithFormat:@"%c", self.usingBroadcast],
       kTARGET_ADDRESS: self.targetAddress,
       kACCELEROMETER_SENDING_DATA: accSendDataString,
-      kACCELEROMETER_PORT: [NSString stringWithFormat:@"%d", self.accelerometerPort],
+      kACCELEROMETER_PORT: [NSString stringWithFormat:@"%ld", (long)self.accelerometerPort],
       kCAMERA_SENDING_DATA: camSendDataString,
-      kCAMERA_PORT: [NSString stringWithFormat:@"%d", self.cameraPort],
+      kCAMERA_PORT: [NSString stringWithFormat:@"%ld", (long)self.cameraPort],
       kUSING_FRONT_CAMERA: useFrontString};
 
     [self.defaults setObject:settingsDictionary forKey:kSETTINGS_DICTIONARY];

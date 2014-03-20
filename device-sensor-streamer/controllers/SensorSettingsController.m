@@ -32,14 +32,14 @@
         self.targetAddress.text = self.sensorSettings.targetAddress;
 
         self.shouldSendAccelerometerData.on = self.sensorSettings.isAccelerometerSendingData;
-        self.accelerometerPort.text = [NSString stringWithFormat:@"%d", self.sensorSettings.accelerometerPort];
+        self.accelerometerPort.text = [NSString stringWithFormat:@"%ld", (long)self.sensorSettings.accelerometerPort];
 
         self.shouldSendCameraData.on = self.sensorSettings.isCameraSendingData;
-        self.cameraPort.text = [NSString stringWithFormat:@"%d", self.sensorSettings.cameraPort];
+        self.cameraPort.text = [NSString stringWithFormat:@"%ld", (long)self.sensorSettings.cameraPort];
         BOOL usingFront = self.sensorSettings.isUsingFrontCamera;
         self.cameraSource.selectedSegmentIndex = (usingFront ? 0 : 1);
 
-            // Update states of segment buttons
+        // Update states of segment buttons
         [self udpModeChanged:self.udpMode];
     }
 }
