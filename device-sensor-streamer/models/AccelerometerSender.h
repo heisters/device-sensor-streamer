@@ -19,9 +19,9 @@
 
 @interface AccelerometerSender : NSObject
 
-@property (nonatomic, strong) SensorSettings* settings;
+@property (nonatomic, strong, readonly) SensorSettings* settings;
 @property (nonatomic, weak) id<MotionDelegate> delegate;
-+ (AccelerometerSender* )sharedSender;
+- (id)initWithSettings:(SensorSettings *)settings;
 - (void)start;
 - (void)stop;
 @end

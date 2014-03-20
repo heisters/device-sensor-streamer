@@ -11,23 +11,22 @@
 @implementation SensorAccelerometerController
 
 - (void)viewDidLoad {
-    AccelerometerSender* sender = [AccelerometerSender sharedSender];
-    sender.delegate = self;
-    sender.settings = [[SensorSettings alloc] initWithPreviousStateIfPossible];
+    self.sender = [[AccelerometerSender alloc] initWithSettings:[[SensorSettings alloc] initWithPreviousStateIfPossible]];
+    self.sender.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
 
-    [[AccelerometerSender sharedSender] start];
+    [self.sender start];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
 
-    [[AccelerometerSender sharedSender] stop];
+    [self.sender stop];
 }
 
 - (void)didAccelerate:(CMAccelerometerData *)data error:(NSError *)error

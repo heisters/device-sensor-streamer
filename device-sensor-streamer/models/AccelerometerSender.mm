@@ -23,10 +23,12 @@
 
 @implementation AccelerometerSender
 
-- (id)init
+- (id)initWithSettings:(SensorSettings *)settings
 {
     self = [super init];
     if ( self ) {
+        _settings = settings;
+
         self.isRunning = NO;
 
         self.osc = [[OSCPackSender alloc] initWithHost:self.settings.targetAddress port:self.settings.accelerometerPort];
@@ -56,15 +58,21 @@
     if ( self.isRunning ) return;
 
     CMDeviceMotionHandler motionHandler = ^(CMDeviceMotion *motion, NSError *error) {
-        [self didMove:motion error:error];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self didMove:motion error:error];
+        });
     };
 
     CMAccelerometerHandler accelHandler = ^(CMAccelerometerData *accelerometerData, NSError *error) {
-        [self didAccel:accelerometerData error:error];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self didAccel:accelerometerData error:error];
+        });
     };
 
     CMGyroHandler gyroHandler = ^(CMGyroData *gyroData, NSError *error) {
-        [self didGyro:gyroData error:error];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self didGyro:gyroData error:error];
+        });
     };
 
 
@@ -94,7 +102,7 @@
 
 - (void)didMove:(CMDeviceMotion *)data error:(NSError *)error
 {
-    [[[[[self.message to:@"/accel"]
+    [[[[[self.message to:@"/user_accel"]
         addFloat:data.userAcceleration.x] addFloat:data.userAcceleration.y] addFloat:data.userAcceleration.z]
      send];
 
@@ -125,19 +133,6 @@
 - (OSCPackMessageBuilder *)message
 {
     return [[self.osc message] add:self.deviceId];
-}
-
-#pragma mark -
-#pragma mark Singleton methods
-
-static AccelerometerSender* sharedRef;
-
-+ (AccelerometerSender* )sharedSender {
-    if (!sharedRef) {
-        sharedRef = [[self alloc] init];
-    }
-
-    return sharedRef;
 }
 
 @end

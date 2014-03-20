@@ -13,5 +13,5 @@
     #import <Foundation/Foundation.h>
 #endif
 
-    // number is in hz
+// number is in hz
 #define vACCELEROMETER_RATE     50
