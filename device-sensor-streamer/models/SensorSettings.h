@@ -17,15 +17,10 @@
 @property (nonatomic, getter = isAccelerometerSendingData) BOOL accelerometerSendingData;
 @property (nonatomic) NSInteger accelerometerPort;
 
-@property (nonatomic, getter = isCameraSendingData) BOOL cameraSendingData;
-@property (nonatomic) NSInteger cameraPort;
-@property (nonatomic, getter = isUsingFrontCamera) BOOL usingFrontCamera;
-
 #pragma mark -
 #pragma mark Public methods
 
 - (BOOL) setAccelerometerPortWithString:(NSString* )string;
-- (BOOL) setCameraPortWithString:(NSString* )string;
 
 -(id) initWithPreviousStateIfPossible;
 -(BOOL) hasPreviousState;

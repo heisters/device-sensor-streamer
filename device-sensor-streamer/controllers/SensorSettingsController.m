@@ -1,10 +1,10 @@
-    //
-    //  SensorSettingsController.m
-    //  SensorStreamer
-    //
-    //  Created by Alex Gittemeier on 3/2/2013.
-    //  Copyright (c) 2013 Gatormeier Business Consulting. All rights reserved.
-    //
+//
+//  SensorSettingsController.m
+//  SensorStreamer
+//
+//  Created by Alex Gittemeier on 3/2/2013.
+//  Copyright (c) 2013 Gatormeier Business Consulting. All rights reserved.
+//
 
 #import "SensorSettingsController.h"
 
@@ -33,11 +33,6 @@
 
         self.shouldSendAccelerometerData.on = self.sensorSettings.isAccelerometerSendingData;
         self.accelerometerPort.text = [NSString stringWithFormat:@"%ld", (long)self.sensorSettings.accelerometerPort];
-
-        self.shouldSendCameraData.on = self.sensorSettings.isCameraSendingData;
-        self.cameraPort.text = [NSString stringWithFormat:@"%ld", (long)self.sensorSettings.cameraPort];
-        BOOL usingFront = self.sensorSettings.isUsingFrontCamera;
-        self.cameraSource.selectedSegmentIndex = (usingFront ? 0 : 1);
 
         // Update states of segment buttons
         [self udpModeChanged:self.udpMode];
@@ -80,31 +75,18 @@
     BOOL sendAccelerometerData  = self.shouldSendAccelerometerData.on;
     NSString* accelerometerPort = self.accelerometerPort.text;
 
-    BOOL sendCameraData = self.shouldSendCameraData.on;
-    NSString* cameraPort = self.cameraPort.text;
-    NSInteger cameraSource = self.cameraSource.selectedSegmentIndex;
-    BOOL cameraFront = (cameraSource == 0);
-
-        // Set direct settings
+    // Set direct settings
     self.sensorSettings.usingBroadcast = usingBroadcast;
     self.sensorSettings.accelerometerSendingData = sendAccelerometerData;
-    self.sensorSettings.cameraSendingData = sendCameraData;
-    self.sensorSettings.usingFrontCamera = cameraFront;
     if (!usingBroadcast) {
-            // Treat broadcast as special case: keep current value
+        // Treat broadcast as special case: keep current value
         self.sensorSettings.targetAddress = address;
     }
-        // Set settings that require internal validation
+    // Set settings that require internal validation
     if ([self.sensorSettings setAccelerometerPortWithString:accelerometerPort]) {
         self.accelerometerPort.backgroundColor = [UIColor whiteColor];
     } else {
         self.accelerometerPort.backgroundColor = [UIColor redColor];
-    }
-    
-    if ([self.sensorSettings setCameraPortWithString:cameraPort]) {
-        self.cameraPort.backgroundColor = [UIColor whiteColor];
-    } else {
-        self.cameraPort.backgroundColor = [UIColor redColor];
     }
 
     [self.sensorSettings updatePersistentState];
@@ -118,9 +100,6 @@
     [self setUdpMode:nil];
     [self setShouldSendAccelerometerData:nil];
     [self setAccelerometerPort:nil];
-    [self setShouldSendCameraData:nil];
-    [self setCameraPort:nil];
-    [self setCameraSource:nil];
     [super viewDidUnload];
 }
 

@@ -22,9 +22,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *targetAddress;
 @property (weak, nonatomic) IBOutlet UISwitch *shouldSendAccelerometerData;
 @property (weak, nonatomic) IBOutlet UITextField *accelerometerPort;
-@property (weak, nonatomic) IBOutlet UISwitch *shouldSendCameraData;
-@property (weak, nonatomic) IBOutlet UITextField *cameraPort;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *cameraSource;
-
 #pragma mark -
 @end

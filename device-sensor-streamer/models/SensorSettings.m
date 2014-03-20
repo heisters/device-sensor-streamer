@@ -16,10 +16,6 @@
 #define kACCELEROMETER_SENDING_DATA @"accelerometerSendingData"
 #define kACCELEROMETER_PORT         @"accelerometerPort"
 
-#define kCAMERA_SENDING_DATA        @"cameraSendingData"
-#define kCAMERA_PORT                @"cameraPort"
-#define kUSING_FRONT_CAMERA         @"usingFrontCamera"
-
 #define vYES                        @"YES"
 #define vNO                         @"NO"
 
@@ -41,29 +37,16 @@
     }
 }
 
--(BOOL) setCameraPortWithString:(NSString* )string {
-    NSInteger port = [string integerValue];
-    if ([[NSString stringWithFormat:@"%ld", (long)port] isEqualToString:string]) {
-        self.cameraPort = port;
-        return YES;
-    } else {
-        return NO;
-    }
-}
 
 -(void) updatePersistentState {
     NSString* accSendDataString = (self.accelerometerSendingData ? vYES : vNO);
-    NSString* camSendDataString = (self.cameraSendingData ? vYES : vNO);
-    NSString* useFrontString = (self.usingFrontCamera ? vYES : vNO);
 
     NSDictionary* settingsDictionary =
     @{kUSING_BROADCAST: [NSString stringWithFormat:@"%c", self.usingBroadcast],
       kTARGET_ADDRESS: self.targetAddress,
       kACCELEROMETER_SENDING_DATA: accSendDataString,
       kACCELEROMETER_PORT: [NSString stringWithFormat:@"%ld", (long)self.accelerometerPort],
-      kCAMERA_SENDING_DATA: camSendDataString,
-      kCAMERA_PORT: [NSString stringWithFormat:@"%ld", (long)self.cameraPort],
-      kUSING_FRONT_CAMERA: useFrontString};
+      };
 
     [self.defaults setObject:settingsDictionary forKey:kSETTINGS_DICTIONARY];
     [self.defaults synchronize];
@@ -79,13 +62,8 @@
             self.targetAddress = [settingsDictionary objectForKey:kTARGET_ADDRESS];
             NSString* accSendDataString = [settingsDictionary objectForKey:kACCELEROMETER_SENDING_DATA];
             self.accelerometerPort = [[settingsDictionary objectForKey:kACCELEROMETER_PORT] integerValue];
-            NSString* camSendDataString = [settingsDictionary objectForKey:kCAMERA_SENDING_DATA];
-            self.cameraPort = [[settingsDictionary objectForKey:kCAMERA_PORT] integerValue];
-            NSString* useFrontString = [settingsDictionary objectForKey:kUSING_FRONT_CAMERA];
 
             self.accelerometerSendingData = ([accSendDataString isEqualToString:@"YES"] ? YES : NO);
-            self.cameraSendingData = ([camSendDataString isEqualToString:@"YES"] ? YES : NO);
-            self.usingFrontCamera = ([useFrontString isEqualToString:@"YES"] ? YES : NO);
         }
     }
     return self;
