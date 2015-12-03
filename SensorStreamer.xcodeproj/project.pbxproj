@@ -233,6 +233,11 @@
 				CLASSPREFIX = Sensor;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Gatormeier Business Consulting";
+				TargetAttributes = {
+					9A7F3FF916E2E6DF00DDBE40 = {
+						DevelopmentTeam = 636LU7YBEN;
+					};
+				};
 			};
 			buildConfigurationList = 9A7F3FF516E2E6DF00DDBE40 /* Build configuration list for PBXProject "SensorStreamer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -397,6 +402,8 @@
 		9A7F401E16E2E6E000DDBE40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "device-sensor-streamer/SensorStreamer-Prefix.pch";
@@ -406,8 +413,9 @@
 					"$(SRCROOT)/../iOS-oscpack/**",
 				);
 				INFOPLIST_FILE = "device-sensor-streamer/SensorStreamer-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				PRODUCT_NAME = SensorStreamer;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -415,6 +423,8 @@
 		9A7F401F16E2E6E000DDBE40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "device-sensor-streamer/SensorStreamer-Prefix.pch";
@@ -424,8 +434,9 @@
 					"$(SRCROOT)/../iOS-oscpack/**",
 				);
 				INFOPLIST_FILE = "device-sensor-streamer/SensorStreamer-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				PRODUCT_NAME = SensorStreamer;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
