@@ -19,13 +19,15 @@
 {
     [super viewWillAppear:animated];
 
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
+
     [self.sender start];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-
+    [UIApplication sharedApplication].idleTimerDisabled = NO;
     [self.sender stop];
 }
 
