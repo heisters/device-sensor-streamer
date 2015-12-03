@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3C01B4C818DB77EC0044D432 /* libiOS-oscpack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C01B4C018DB6E4B0044D432 /* libiOS-oscpack.a */; };
+		3C098AF31C10CCB800B7C282 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C098AF11C10CCB800B7C282 /* settings.png */; };
+		3C098AF41C10CCB800B7C282 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C098AF21C10CCB800B7C282 /* settings@2x.png */; };
+		3C098AF71C10CE1D00B7C282 /* broadcast.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C098AF51C10CE1D00B7C282 /* broadcast.png */; };
+		3C098AF81C10CE1D00B7C282 /* broadcast@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C098AF61C10CE1D00B7C282 /* broadcast@2x.png */; };
 		3C36A8F418C7DD7600D13CAF /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C36A8F318C7DD7600D13CAF /* CoreMotion.framework */; };
 		9A1B804B16EABA1A00941540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B804616EABA1A00941540 /* main.m */; };
 		9A1B804C16EABA1A00941540 /* SensorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B804816EABA1A00941540 /* SensorAppDelegate.m */; };
@@ -19,8 +23,6 @@
 		9A7F401716E2E6DF00DDBE40 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F401516E2E6DF00DDBE40 /* MainStoryboard.storyboard */; };
 		9AB4EB1E16E9CFD0004F13B5 /* AccelerometerSender.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB1D16E9CFD0004F13B5 /* AccelerometerSender.mm */; };
 		9AB4EB2716E9D055004F13B5 /* acceleration.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB1F16E9D055004F13B5 /* acceleration.png */; };
-		9AB4EB2D16E9D055004F13B5 /* network.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB2516E9D055004F13B5 /* network.png */; };
-		9AB4EB2E16E9D055004F13B5 /* webcam-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB2616E9D055004F13B5 /* webcam-icon.png */; };
 		9AB4EB3416E9D07F004F13B5 /* SensorAccelerometerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3116E9D07F004F13B5 /* SensorAccelerometerController.m */; };
 		9AB4EB3516E9D07F004F13B5 /* SensorSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3316E9D07F004F13B5 /* SensorSettingsController.m */; };
 		9AB4EB3716E9D1F4004F13B5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3616E9D1F3004F13B5 /* Default-568h@2x.png */; };
@@ -56,6 +58,10 @@
 
 /* Begin PBXFileReference section */
 		3C01B4BA18DB6E4B0044D432 /* iOS-oscpack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "iOS-oscpack.xcodeproj"; path = "../iOS-oscpack/iOS-oscpack.xcodeproj"; sourceTree = "<group>"; };
+		3C098AF11C10CCB800B7C282 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		3C098AF21C10CCB800B7C282 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		3C098AF51C10CE1D00B7C282 /* broadcast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = broadcast.png; sourceTree = "<group>"; };
+		3C098AF61C10CE1D00B7C282 /* broadcast@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "broadcast@2x.png"; sourceTree = "<group>"; };
 		3C36A8F318C7DD7600D13CAF /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		9A1B804616EABA1A00941540 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = support/main.m; sourceTree = "<group>"; };
 		9A1B804716EABA1A00941540 /* SensorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorAppDelegate.h; path = support/SensorAppDelegate.h; sourceTree = "<group>"; };
@@ -72,18 +78,16 @@
 		9A7F401616E2E6DF00DDBE40 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9AB4EB1C16E9CFD0004F13B5 /* AccelerometerSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccelerometerSender.h; path = models/AccelerometerSender.h; sourceTree = "<group>"; };
 		9AB4EB1D16E9CFD0004F13B5 /* AccelerometerSender.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AccelerometerSender.mm; path = models/AccelerometerSender.mm; sourceTree = "<group>"; };
-		9AB4EB1F16E9D055004F13B5 /* acceleration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = acceleration.png; path = images/acceleration.png; sourceTree = "<group>"; };
-		9AB4EB2516E9D055004F13B5 /* network.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = network.png; path = images/network.png; sourceTree = "<group>"; };
-		9AB4EB2616E9D055004F13B5 /* webcam-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "webcam-icon.png"; path = "images/webcam-icon.png"; sourceTree = "<group>"; };
+		9AB4EB1F16E9D055004F13B5 /* acceleration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = acceleration.png; sourceTree = "<group>"; };
 		9AB4EB3016E9D07F004F13B5 /* SensorAccelerometerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorAccelerometerController.h; sourceTree = "<group>"; };
 		9AB4EB3116E9D07F004F13B5 /* SensorAccelerometerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorAccelerometerController.m; sourceTree = "<group>"; };
 		9AB4EB3216E9D07F004F13B5 /* SensorSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorSettingsController.h; sourceTree = "<group>"; };
 		9AB4EB3316E9D07F004F13B5 /* SensorSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorSettingsController.m; sourceTree = "<group>"; };
-		9AB4EB3616E9D1F3004F13B5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		9AB4EB3816E9D20B004F13B5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		9AB4EB3A16E9D214004F13B5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
-		9AB4EB3C16E9D231004F13B5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
-		9AB4EB3E16E9D23D004F13B5 /* icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-retina.png"; path = "../icon-retina.png"; sourceTree = "<group>"; };
+		9AB4EB3616E9D1F3004F13B5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9AB4EB3816E9D20B004F13B5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9AB4EB3A16E9D214004F13B5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9AB4EB3C16E9D231004F13B5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		9AB4EB3E16E9D23D004F13B5 /* icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-retina.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,16 +183,19 @@
 		9A7F403316E3018700DDBE40 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3C098AF51C10CE1D00B7C282 /* broadcast.png */,
+				3C098AF61C10CE1D00B7C282 /* broadcast@2x.png */,
+				3C098AF11C10CCB800B7C282 /* settings.png */,
+				3C098AF21C10CCB800B7C282 /* settings@2x.png */,
 				9AB4EB3E16E9D23D004F13B5 /* icon-retina.png */,
 				9AB4EB3C16E9D231004F13B5 /* icon.png */,
 				9AB4EB3A16E9D214004F13B5 /* Default.png */,
 				9AB4EB3816E9D20B004F13B5 /* Default@2x.png */,
 				9AB4EB3616E9D1F3004F13B5 /* Default-568h@2x.png */,
 				9AB4EB1F16E9D055004F13B5 /* acceleration.png */,
-				9AB4EB2516E9D055004F13B5 /* network.png */,
-				9AB4EB2616E9D055004F13B5 /* webcam-icon.png */,
 			);
 			name = Images;
+			path = images;
 			sourceTree = "<group>";
 		};
 		9AB4EB2F16E9D07F004F13B5 /* Controllers */ = {
@@ -287,11 +294,13 @@
 				9A7F400816E2E6DF00DDBE40 /* InfoPlist.strings in Resources */,
 				9A7F401716E2E6DF00DDBE40 /* MainStoryboard.storyboard in Resources */,
 				9AB4EB2716E9D055004F13B5 /* acceleration.png in Resources */,
-				9AB4EB2D16E9D055004F13B5 /* network.png in Resources */,
-				9AB4EB2E16E9D055004F13B5 /* webcam-icon.png in Resources */,
 				9AB4EB3716E9D1F4004F13B5 /* Default-568h@2x.png in Resources */,
 				9AB4EB3916E9D20B004F13B5 /* Default@2x.png in Resources */,
+				3C098AF71C10CE1D00B7C282 /* broadcast.png in Resources */,
+				3C098AF41C10CCB800B7C282 /* settings@2x.png in Resources */,
 				9AB4EB3B16E9D215004F13B5 /* Default.png in Resources */,
+				3C098AF81C10CE1D00B7C282 /* broadcast@2x.png in Resources */,
+				3C098AF31C10CCB800B7C282 /* settings.png in Resources */,
 				9AB4EB3D16E9D231004F13B5 /* icon.png in Resources */,
 				9AB4EB3F16E9D23D004F13B5 /* icon-retina.png in Resources */,
 			);

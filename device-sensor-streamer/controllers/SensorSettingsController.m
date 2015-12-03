@@ -28,8 +28,9 @@
 - (void) viewDidLoad {
     if ([self.sensorSettings hasPreviousState]) {
         BOOL usingBrodacast = self.sensorSettings.isUsingBroadcast;
+        NSString *host = usingBrodacast ? self.sensorSettings.targetBroadcastAddress : self.sensorSettings.targetAddress;
         self.udpMode.selectedSegmentIndex = (usingBrodacast ? 1 : 0);
-        self.targetAddress.text = self.sensorSettings.targetAddress;
+        self.targetAddress.text = host;
 
         self.shouldSendAccelerometerData.on = self.sensorSettings.isAccelerometerSendingData;
         self.accelerometerPort.text = [NSString stringWithFormat:@"%ld", (long)self.sensorSettings.accelerometerPort];
@@ -40,17 +41,13 @@
 }
 
 - (IBAction)udpModeChanged:(UISegmentedControl *)sender {
-        // Update state state of the address field, but nothing else
+    // Update state state of the address field, but nothing else
     switch ([sender selectedSegmentIndex]) {
         case 0:
-            self.targetAddress.enabled = YES;
-                // Return text to what it was set
             self.targetAddress.text = self.sensorSettings.targetAddress;
             break;
         case 1:
-            self.targetAddress.enabled = NO;
-                // Allow placeholder text to "show" thru
-            self.targetAddress.text = @"";
+            self.targetAddress.text = self.sensorSettings.targetBroadcastAddress;
         default:
             break;
     }
@@ -78,7 +75,9 @@
     // Set direct settings
     self.sensorSettings.usingBroadcast = usingBroadcast;
     self.sensorSettings.accelerometerSendingData = sendAccelerometerData;
-    if (!usingBroadcast) {
+    if ( usingBroadcast ) {
+        self.sensorSettings.targetBroadcastAddress = address;
+    } else {
         // Treat broadcast as special case: keep current value
         self.sensorSettings.targetAddress = address;
     }
@@ -89,7 +88,7 @@
         self.accelerometerPort.backgroundColor = [UIColor redColor];
     }
 
-    [self.sensorSettings updatePersistentState];
+    [self.sensorSettings writeState];
 }
 
 #pragma mark -

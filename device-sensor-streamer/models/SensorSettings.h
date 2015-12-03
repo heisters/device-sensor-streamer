@@ -13,6 +13,7 @@
 
 @property (nonatomic, getter = isUsingBroadcast) BOOL usingBroadcast;
 @property (nonatomic, strong) NSString* targetAddress;
+@property (nonatomic, strong) NSString* targetBroadcastAddress;
 
 @property (nonatomic, getter = isAccelerometerSendingData) BOOL accelerometerSendingData;
 @property (nonatomic) NSInteger accelerometerPort;
@@ -24,7 +25,8 @@
 
 -(id) initWithPreviousStateIfPossible;
 -(BOOL) hasPreviousState;
--(void) updatePersistentState;
+-(void) writeState;
+-(void) readState;
 
 #pragma mark -
 @end

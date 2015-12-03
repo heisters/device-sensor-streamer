@@ -19,6 +19,8 @@
 @property (nonatomic, strong) NSOperationQueue *accelQueue;
 @property (nonatomic, strong) NSOperationQueue *gyroQueue;
 @property (nonatomic, strong) NSString *deviceId;
+
+- (void) initOSC;
 @end
 
 @implementation AccelerometerSender
@@ -30,9 +32,6 @@
         _settings = settings;
 
         self.isRunning = NO;
-
-        self.osc = [[OSCPackSender alloc] initWithHost:self.settings.targetAddress port:self.settings.accelerometerPort];
-        [self.osc enableBroadcast];
 
         self.deviceId = [[UIDevice currentDevice] name];
 
@@ -53,9 +52,26 @@
     return self;
 }
 
+- (void)initOSC
+{
+    BOOL broadcast = self.settings.isUsingBroadcast;
+    NSString *host = broadcast ? self.settings.targetBroadcastAddress : self.settings.targetAddress;
+    NSInteger port = self.settings.accelerometerPort;
+
+    if ( self.osc && self.osc.host == host && self.osc.port == port ) {
+        return;
+    }
+
+    self.osc = [[OSCPackSender alloc] initWithHost:host port:port];
+    if ( broadcast ) [self.osc enableBroadcast];
+}
+
 - (void)start
 {
     if ( self.isRunning ) return;
+
+    [self.settings readState];
+    [self initOSC];
 
     CMDeviceMotionHandler motionHandler = ^(CMDeviceMotion *motion, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{

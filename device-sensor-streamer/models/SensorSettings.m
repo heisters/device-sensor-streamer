@@ -12,12 +12,10 @@
 
 #define kUSING_BROADCAST            @"usingBroadcast"
 #define kTARGET_ADDRESS             @"targetAddress"
+#define kTARGET_BROADCAST_ADDRESS   @"targetBroadcastAddress"
 
 #define kACCELEROMETER_SENDING_DATA @"accelerometerSendingData"
 #define kACCELEROMETER_PORT         @"accelerometerPort"
-
-#define vYES                        @"YES"
-#define vNO                         @"NO"
 
 @interface SensorSettings ()
 
@@ -38,13 +36,12 @@
 }
 
 
--(void) updatePersistentState {
-    NSString* accSendDataString = (self.accelerometerSendingData ? vYES : vNO);
-
+-(void) writeState {
     NSDictionary* settingsDictionary =
-    @{kUSING_BROADCAST: [NSString stringWithFormat:@"%c", self.usingBroadcast],
+    @{kUSING_BROADCAST: [NSNumber numberWithBool:self.usingBroadcast],
       kTARGET_ADDRESS: self.targetAddress,
-      kACCELEROMETER_SENDING_DATA: accSendDataString,
+      kTARGET_BROADCAST_ADDRESS: self.targetBroadcastAddress,
+      kACCELEROMETER_SENDING_DATA: [NSNumber numberWithBool:self.accelerometerSendingData],
       kACCELEROMETER_PORT: [NSString stringWithFormat:@"%ld", (long)self.accelerometerPort],
       };
 
@@ -52,19 +49,22 @@
     [self.defaults synchronize];
 }
 
+-(void) readState {
+    if ([self hasPreviousState]) {
+        NSDictionary* settingsDictionary = [self.defaults objectForKey:kSETTINGS_DICTIONARY];
+
+        self.usingBroadcast = [[settingsDictionary objectForKey:kUSING_BROADCAST] boolValue];
+        self.targetAddress = [settingsDictionary objectForKey:kTARGET_ADDRESS];
+        self.targetBroadcastAddress = [settingsDictionary objectForKey:kTARGET_BROADCAST_ADDRESS];
+        self.accelerometerPort = [[settingsDictionary objectForKey:kACCELEROMETER_PORT] integerValue];
+        self.accelerometerSendingData = [[settingsDictionary objectForKey:kACCELEROMETER_SENDING_DATA] boolValue];
+    }
+}
+
 -(id) initWithPreviousStateIfPossible {
     self = [super init];
     if (self) {
-        if ([self hasPreviousState]) {
-            NSDictionary* settingsDictionary = [self.defaults objectForKey:kSETTINGS_DICTIONARY];
-
-            self.usingBroadcast = [[settingsDictionary objectForKey:kUSING_BROADCAST] boolValue];
-            self.targetAddress = [settingsDictionary objectForKey:kTARGET_ADDRESS];
-            NSString* accSendDataString = [settingsDictionary objectForKey:kACCELEROMETER_SENDING_DATA];
-            self.accelerometerPort = [[settingsDictionary objectForKey:kACCELEROMETER_PORT] integerValue];
-
-            self.accelerometerSendingData = ([accSendDataString isEqualToString:@"YES"] ? YES : NO);
-        }
+        [self readState];
     }
     return self;
 }
@@ -85,10 +85,17 @@
 
 -(NSString* )targetAddress {
     if (!_targetAddress) {
-            //Serves as default "Unicast address"
+        //Serves as default "Unicast address"
         _targetAddress = @"192.168.x.x";
     }
     return _targetAddress;
+}
+
+-(NSString *)targetBroadcastAddress {
+    if ( !_targetBroadcastAddress ) {
+        _targetBroadcastAddress = @"255.255.255.255";
+    }
+    return _targetBroadcastAddress;
 }
 
 #pragma mark -
