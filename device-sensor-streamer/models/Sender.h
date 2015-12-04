@@ -1,5 +1,5 @@
 //
-//  AccelerometerSender.h
+//  Sender.h
 //  SensorStreamer
 //
 //  Created by Alex Gittemeier on 3/8/2013.
@@ -17,7 +17,7 @@
 - (void)didMove:(CMDeviceMotion *)data error:(NSError *)error;
 @end
 
-@interface AccelerometerSender : NSObject
+@interface Sender : NSObject
 
 @property (nonatomic, strong, readonly) SensorSettings* settings;
 @property (nonatomic, weak) id<MotionDelegate> delegate;

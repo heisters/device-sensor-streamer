@@ -1,5 +1,5 @@
 //
-//  SensorAccelerometerController.h
+//  SendController.h
 //  SensorStreamer
 //
 //  Created by Alex Gittemeier on 3/8/2013.
@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AccelerometerSender.h"
+#import "Sender.h"
 
-@interface SensorAccelerometerController : UITableViewController< MotionDelegate >
-@property (strong, nonatomic) AccelerometerSender *sender;
+@interface SendController : UITableViewController< MotionDelegate >
+@property (strong, nonatomic) Sender *sender;
 @property (weak, nonatomic) IBOutlet UISlider *sX;
 @property (weak, nonatomic) IBOutlet UISlider *sY;
 @property (weak, nonatomic) IBOutlet UISlider *sZ;

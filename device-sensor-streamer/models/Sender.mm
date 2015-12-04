@@ -1,15 +1,15 @@
     //
-    //  AccelerometerSender.m
+    //  Sender.m
     //  SensorStreamer
     //
     //  Created by Alex Gittemeier on 3/8/2013.
     //  Copyright (c) 2013 Gatormeier Business Consulting. All rights reserved.
     //
 
-#import "AccelerometerSender.h"
+#import "Sender.h"
 #import <OSCPack.h>
 
-@interface AccelerometerSender ()
+@interface Sender ()
 
 @property (nonatomic, strong) OSCPackSender *osc;
 @property (nonatomic) BOOL hasConnected;
@@ -23,7 +23,7 @@
 - (void) initOSC;
 @end
 
-@implementation AccelerometerSender
+@implementation Sender
 
 - (id)initWithSettings:(SensorSettings *)settings
 {

@@ -1,17 +1,17 @@
 //
-//  SensorAccelerometerController.m
+//  SendController.m
 //  SensorStreamer
 //
 //  Created by Alex Gittemeier on 3/8/2013.
 //  Copyright (c) 2013 Gatormeier Business Consulting. All rights reserved.
 //
 
-#import "SensorAccelerometerController.h"
+#import "SendController.h"
 
-@implementation SensorAccelerometerController
+@implementation SendController
 
 - (void)viewDidLoad {
-    self.sender = [[AccelerometerSender alloc] initWithSettings:[[SensorSettings alloc] initWithPreviousStateIfPossible]];
+    self.sender = [[Sender alloc] initWithSettings:[[SensorSettings alloc] initWithPreviousStateIfPossible]];
     self.sender.delegate = self;
 }
 

@@ -21,9 +21,9 @@
 		9A7F400216E2E6DF00DDBE40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7F400116E2E6DF00DDBE40 /* CoreGraphics.framework */; };
 		9A7F400816E2E6DF00DDBE40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F400616E2E6DF00DDBE40 /* InfoPlist.strings */; };
 		9A7F401716E2E6DF00DDBE40 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F401516E2E6DF00DDBE40 /* MainStoryboard.storyboard */; };
-		9AB4EB1E16E9CFD0004F13B5 /* AccelerometerSender.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB1D16E9CFD0004F13B5 /* AccelerometerSender.mm */; };
+		9AB4EB1E16E9CFD0004F13B5 /* Sender.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB1D16E9CFD0004F13B5 /* Sender.mm */; };
 		9AB4EB2716E9D055004F13B5 /* acceleration.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB1F16E9D055004F13B5 /* acceleration.png */; };
-		9AB4EB3416E9D07F004F13B5 /* SensorAccelerometerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3116E9D07F004F13B5 /* SensorAccelerometerController.m */; };
+		9AB4EB3416E9D07F004F13B5 /* SendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3116E9D07F004F13B5 /* SendController.m */; };
 		9AB4EB3516E9D07F004F13B5 /* SensorSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3316E9D07F004F13B5 /* SensorSettingsController.m */; };
 		9AB4EB3716E9D1F4004F13B5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3616E9D1F3004F13B5 /* Default-568h@2x.png */; };
 		9AB4EB3916E9D20B004F13B5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3816E9D20B004F13B5 /* Default@2x.png */; };
@@ -76,11 +76,11 @@
 		9A7F400116E2E6DF00DDBE40 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9A7F400716E2E6DF00DDBE40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A7F401616E2E6DF00DDBE40 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		9AB4EB1C16E9CFD0004F13B5 /* AccelerometerSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccelerometerSender.h; path = models/AccelerometerSender.h; sourceTree = "<group>"; };
-		9AB4EB1D16E9CFD0004F13B5 /* AccelerometerSender.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AccelerometerSender.mm; path = models/AccelerometerSender.mm; sourceTree = "<group>"; };
+		9AB4EB1C16E9CFD0004F13B5 /* Sender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sender.h; path = models/Sender.h; sourceTree = "<group>"; };
+		9AB4EB1D16E9CFD0004F13B5 /* Sender.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Sender.mm; path = models/Sender.mm; sourceTree = "<group>"; };
 		9AB4EB1F16E9D055004F13B5 /* acceleration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = acceleration.png; sourceTree = "<group>"; };
-		9AB4EB3016E9D07F004F13B5 /* SensorAccelerometerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorAccelerometerController.h; sourceTree = "<group>"; };
-		9AB4EB3116E9D07F004F13B5 /* SensorAccelerometerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorAccelerometerController.m; sourceTree = "<group>"; };
+		9AB4EB3016E9D07F004F13B5 /* SendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendController.h; sourceTree = "<group>"; };
+		9AB4EB3116E9D07F004F13B5 /* SendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendController.m; sourceTree = "<group>"; };
 		9AB4EB3216E9D07F004F13B5 /* SensorSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorSettingsController.h; sourceTree = "<group>"; };
 		9AB4EB3316E9D07F004F13B5 /* SensorSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorSettingsController.m; sourceTree = "<group>"; };
 		9AB4EB3616E9D1F3004F13B5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -118,8 +118,8 @@
 		9A29D20116E3D951005519C6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9AB4EB1C16E9CFD0004F13B5 /* AccelerometerSender.h */,
-				9AB4EB1D16E9CFD0004F13B5 /* AccelerometerSender.mm */,
+				9AB4EB1C16E9CFD0004F13B5 /* Sender.h */,
+				9AB4EB1D16E9CFD0004F13B5 /* Sender.mm */,
 				9A29D1FE16E3D94C005519C6 /* SensorSettings.h */,
 				9A29D1FF16E3D94C005519C6 /* SensorSettings.m */,
 			);
@@ -201,8 +201,8 @@
 		9AB4EB2F16E9D07F004F13B5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9AB4EB3016E9D07F004F13B5 /* SensorAccelerometerController.h */,
-				9AB4EB3116E9D07F004F13B5 /* SensorAccelerometerController.m */,
+				9AB4EB3016E9D07F004F13B5 /* SendController.h */,
+				9AB4EB3116E9D07F004F13B5 /* SendController.m */,
 				9AB4EB3216E9D07F004F13B5 /* SensorSettingsController.h */,
 				9AB4EB3316E9D07F004F13B5 /* SensorSettingsController.m */,
 			);
@@ -314,8 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A29D20016E3D94C005519C6 /* SensorSettings.m in Sources */,
-				9AB4EB1E16E9CFD0004F13B5 /* AccelerometerSender.mm in Sources */,
-				9AB4EB3416E9D07F004F13B5 /* SensorAccelerometerController.m in Sources */,
+				9AB4EB1E16E9CFD0004F13B5 /* Sender.mm in Sources */,
+				9AB4EB3416E9D07F004F13B5 /* SendController.m in Sources */,
 				9AB4EB3516E9D07F004F13B5 /* SensorSettingsController.m in Sources */,
 				9A1B804B16EABA1A00941540 /* main.m in Sources */,
 				9A1B804C16EABA1A00941540 /* SensorAppDelegate.m in Sources */,
