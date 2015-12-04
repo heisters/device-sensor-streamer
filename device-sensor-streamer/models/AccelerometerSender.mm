@@ -92,7 +92,7 @@
     };
 
 
-    [self.motionManager startDeviceMotionUpdatesToQueue:self.deviceQueue withHandler:motionHandler];
+    [self.motionManager startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXMagneticNorthZVertical toQueue:self.deviceQueue withHandler:motionHandler];
     [self.motionManager startAccelerometerUpdatesToQueue:self.accelQueue withHandler:accelHandler];
     [self.motionManager startGyroUpdatesToQueue:self.gyroQueue withHandler:gyroHandler];
 
@@ -121,6 +121,11 @@
     [[[[[self.message to:@"/user_accel"]
         addFloat:data.userAcceleration.x] addFloat:data.userAcceleration.y] addFloat:data.userAcceleration.z]
      send];
+
+    CMQuaternion q = data.attitude.quaternion;
+    [[[[[[self.message to:@"/attitude"] addDouble:q.x] addDouble:q.y] addDouble:q.z] addDouble:q.w]
+     send];
+
 
     if ( [self.delegate respondsToSelector:@selector(didMove:error:)] )
         [self.delegate didMove:data error:error];
