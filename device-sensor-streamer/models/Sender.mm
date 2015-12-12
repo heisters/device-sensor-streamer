@@ -123,7 +123,7 @@
      send];
 
     CMQuaternion q = data.attitude.quaternion;
-    [[[[[[self.message to:@"/attitude"] addDouble:q.x] addDouble:q.y] addDouble:q.z] addDouble:q.w]
+    [[[[[[self.message to:@"/attitude"] addFloat:q.x] addFloat:q.y] addFloat:q.z] addFloat:q.w]
      send];
 
 

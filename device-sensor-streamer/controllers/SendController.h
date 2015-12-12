@@ -9,14 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Sender.h"
 
+@class LineChartView;
+
 @interface SendController : UITableViewController< MotionDelegate >
+@property (weak, nonatomic) IBOutlet LineChartView *accelView;
 @property (strong, nonatomic) Sender *sender;
-@property (weak, nonatomic) IBOutlet UISlider *sX;
-@property (weak, nonatomic) IBOutlet UISlider *sY;
-@property (weak, nonatomic) IBOutlet UISlider *sZ;
-
-@property (weak, nonatomic) IBOutlet UILabel *rX;
-@property (weak, nonatomic) IBOutlet UILabel *rY;
-@property (weak, nonatomic) IBOutlet UILabel *rZ;
-
 @end
