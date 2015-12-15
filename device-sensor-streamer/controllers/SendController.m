@@ -7,11 +7,11 @@
 //
 
 #import "SendController.h"
-@import Charts;
+#import "SensorStreamer-Swift.h"
+
 
 @interface SendController()
 
-@property (nonatomic, strong) NSMutableArray* timesData;
 @end
 
 @implementation SendController
@@ -19,34 +19,6 @@
 - (void)viewDidLoad {
     self.sender = [[Sender alloc] initWithSettings:[[SensorSettings alloc] initWithPreviousStateIfPossible]];
     self.sender.delegate = self;
-
-
-    self.timesData  = [[NSMutableArray alloc] init];
-    LineChartDataSet* accelXData = [[LineChartDataSet alloc] initWithYVals:@[] label:@"X"];
-    LineChartDataSet* accelYData = [[LineChartDataSet alloc] initWithYVals:@[] label:@"Y"];
-    LineChartDataSet* accelZData = [[LineChartDataSet alloc] initWithYVals:@[] label:@"Z"];
-
-    accelXData.lineWidth = 1;
-    accelXData.circleRadius = 1;
-    [accelXData setColor:[UIColor redColor]];
-    [accelXData setCircleColor:[UIColor redColor]];
-    accelXData.fillColor = [UIColor redColor];
-
-    accelYData.lineWidth = 1;
-    accelYData.circleRadius = 1;
-    [accelYData setColor:[UIColor greenColor]];
-    [accelYData setCircleColor:[UIColor greenColor]];
-    accelYData.fillColor = [UIColor greenColor];
-
-    accelZData.lineWidth = 1;
-    accelZData.circleRadius = 1;
-    [accelZData setColor:[UIColor blueColor]];
-    [accelZData setCircleColor:[UIColor blueColor]];
-    accelZData.fillColor = [UIColor blueColor];
-
-
-    self.accelView.data = [[LineChartData alloc] initWithXVals:@[] dataSets:@[accelXData, accelYData, accelZData]];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -67,6 +39,8 @@
 
 - (void)didAccelerate:(CMAccelerometerData *)data error:(NSError *)error
 {
+    [self.accelView push:data.acceleration.x y:data.acceleration.y z:data.acceleration.z];
+
 //    NSDate *now = [NSDate date];
 //    [self.timesData addObject:now];
 //

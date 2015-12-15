@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Sender.h"
 
-@class LineChartView;
+@class GraphView;
 
 @interface SendController : UITableViewController< MotionDelegate >
-@property (weak, nonatomic) IBOutlet LineChartView *accelView;
+@property (weak, nonatomic) IBOutlet GraphView *accelView;
 @property (strong, nonatomic) Sender *sender;
 @end

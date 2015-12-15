@@ -12,9 +12,8 @@
 		3C098AF41C10CCB800B7C282 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C098AF21C10CCB800B7C282 /* settings@2x.png */; };
 		3C098AF71C10CE1D00B7C282 /* broadcast.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C098AF51C10CE1D00B7C282 /* broadcast.png */; };
 		3C098AF81C10CE1D00B7C282 /* broadcast@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C098AF61C10CE1D00B7C282 /* broadcast@2x.png */; };
-		3C199D381C1B746A003066A4 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EE91D1C1656360079B8E1 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3C199D3C1C1B74C0003066A4 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2EE91D1C1656360079B8E1 /* Charts.framework */; };
 		3C36A8F418C7DD7600D13CAF /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C36A8F318C7DD7600D13CAF /* CoreMotion.framework */; };
+		3CF9FFA51C20B86100A9F636 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9FFA41C20B86100A9F636 /* GraphView.swift */; };
 		9A1B804B16EABA1A00941540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B804616EABA1A00941540 /* main.m */; };
 		9A1B804C16EABA1A00941540 /* SensorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B804816EABA1A00941540 /* SensorAppDelegate.m */; };
 		9A29D20016E3D94C005519C6 /* SensorSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29D1FF16E3D94C005519C6 /* SensorSettings.m */; };
@@ -56,41 +55,6 @@
 			remoteGlobalIDString = 3C01B43518DA1C720044D432;
 			remoteInfo = "iOS-oscpack";
 		};
-		3C199D351C1B72C3003066A4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C2EE9161C1656360079B8E1 /* Charts.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
-			remoteInfo = "Charts-iOS";
-		};
-		3C199D391C1B746A003066A4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C2EE9161C1656360079B8E1 /* Charts.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
-			remoteInfo = "Charts-iOS";
-		};
-		3C2EE91C1C1656360079B8E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C2EE9161C1656360079B8E1 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
-			remoteInfo = "Charts-iOS";
-		};
-		3C2EE91E1C1656360079B8E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C2EE9161C1656360079B8E1 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
-			remoteInfo = "Charts-TV";
-		};
-		3C2EE9201C1656360079B8E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C2EE9161C1656360079B8E1 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
-			remoteInfo = ChartsTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -100,7 +64,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3C199D381C1B746A003066A4 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,8 +76,9 @@
 		3C098AF21C10CCB800B7C282 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		3C098AF51C10CE1D00B7C282 /* broadcast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = broadcast.png; sourceTree = "<group>"; };
 		3C098AF61C10CE1D00B7C282 /* broadcast@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "broadcast@2x.png"; sourceTree = "<group>"; };
-		3C2EE9161C1656360079B8E1 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "ios-charts/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		3C36A8F318C7DD7600D13CAF /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		3CF9FFA31C20B86000A9F636 /* SensorStreamer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SensorStreamer-Bridging-Header.h"; sourceTree = "<group>"; };
+		3CF9FFA41C20B86100A9F636 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphView.swift; path = views/GraphView.swift; sourceTree = "<group>"; };
 		9A1B804616EABA1A00941540 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = support/main.m; sourceTree = "<group>"; };
 		9A1B804716EABA1A00941540 /* SensorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorAppDelegate.h; path = support/SensorAppDelegate.h; sourceTree = "<group>"; };
 		9A1B804816EABA1A00941540 /* SensorAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorAppDelegate.m; path = support/SensorAppDelegate.m; sourceTree = "<group>"; };
@@ -148,7 +112,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C01B4C818DB77EC0044D432 /* libiOS-oscpack.a in Frameworks */,
-				3C199D3C1C1B74C0003066A4 /* Charts.framework in Frameworks */,
 				3C36A8F418C7DD7600D13CAF /* CoreMotion.framework in Frameworks */,
 				9A7F3FFE16E2E6DF00DDBE40 /* UIKit.framework in Frameworks */,
 				9A7F400016E2E6DF00DDBE40 /* Foundation.framework in Frameworks */,
@@ -171,18 +134,10 @@
 		3C2EE9091C1211D90079B8E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3CF9FFA41C20B86100A9F636 /* GraphView.swift */,
+				3CF9FFA31C20B86000A9F636 /* SensorStreamer-Bridging-Header.h */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		3C2EE9171C1656360079B8E1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3C2EE91D1C1656360079B8E1 /* Charts.framework */,
-				3C2EE91F1C1656360079B8E1 /* Charts.framework */,
-				3C2EE9211C1656360079B8E1 /* ChartsTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		9A29D20116E3D951005519C6 /* Models */ = {
@@ -199,7 +154,6 @@
 		9A7F3FF116E2E6DF00DDBE40 = {
 			isa = PBXGroup;
 			children = (
-				3C2EE9161C1656360079B8E1 /* Charts.xcodeproj */,
 				3C01B4BA18DB6E4B0044D432 /* iOS-oscpack.xcodeproj */,
 				9A7F400316E2E6DF00DDBE40 /* device-sensor-streamer */,
 				9A7F3FFC16E2E6DF00DDBE40 /* Frameworks */,
@@ -297,9 +251,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				3C199D361C1B72C3003066A4 /* PBXTargetDependency */,
 				3C01B4C718DB77D00044D432 /* PBXTargetDependency */,
-				3C199D3A1C1B746A003066A4 /* PBXTargetDependency */,
 			);
 			name = SensorStreamer;
 			productName = "device-sensor-streamer";
@@ -313,6 +265,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Sensor;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Gatormeier Business Consulting";
 				TargetAttributes = {
@@ -332,10 +285,6 @@
 			productRefGroup = 9A7F3FFB16E2E6DF00DDBE40 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
-				{
-					ProductGroup = 3C2EE9171C1656360079B8E1 /* Products */;
-					ProjectRef = 3C2EE9161C1656360079B8E1 /* Charts.xcodeproj */;
-				},
 				{
 					ProductGroup = 3C01B4BB18DB6E4B0044D432 /* Products */;
 					ProjectRef = 3C01B4BA18DB6E4B0044D432 /* iOS-oscpack.xcodeproj */;
@@ -361,27 +310,6 @@
 			fileType = wrapper.cfbundle;
 			path = "iOS-oscpackTests.xctest";
 			remoteRef = 3C01B4C118DB6E4B0044D432 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3C2EE91D1C1656360079B8E1 /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 3C2EE91C1C1656360079B8E1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3C2EE91F1C1656360079B8E1 /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 3C2EE91E1C1656360079B8E1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3C2EE9211C1656360079B8E1 /* ChartsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ChartsTests.xctest;
-			remoteRef = 3C2EE9201C1656360079B8E1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -415,6 +343,7 @@
 			files = (
 				9A29D20016E3D94C005519C6 /* SensorSettings.m in Sources */,
 				9AB4EB1E16E9CFD0004F13B5 /* Sender.mm in Sources */,
+				3CF9FFA51C20B86100A9F636 /* GraphView.swift in Sources */,
 				9AB4EB3416E9D07F004F13B5 /* SendController.m in Sources */,
 				9AB4EB3516E9D07F004F13B5 /* SensorSettingsController.m in Sources */,
 				9A1B804B16EABA1A00941540 /* main.m in Sources */,
@@ -429,16 +358,6 @@
 			isa = PBXTargetDependency;
 			name = "iOS-oscpack";
 			targetProxy = 3C01B4C618DB77D00044D432 /* PBXContainerItemProxy */;
-		};
-		3C199D361C1B72C3003066A4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Charts-iOS";
-			targetProxy = 3C199D351C1B72C3003066A4 /* PBXContainerItemProxy */;
-		};
-		3C199D3A1C1B746A003066A4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Charts-iOS";
-			targetProxy = 3C199D391C1B746A003066A4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -524,7 +443,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "device-sensor-streamer/SensorStreamer-Prefix.pch";
@@ -538,6 +457,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = SensorStreamer;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "device-sensor-streamer/SensorStreamer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -548,7 +469,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "device-sensor-streamer/SensorStreamer-Prefix.pch";
@@ -562,6 +483,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = SensorStreamer;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "device-sensor-streamer/SensorStreamer-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
