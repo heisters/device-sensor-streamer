@@ -266,7 +266,7 @@
 			attributes = {
 				CLASSPREFIX = Sensor;
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Gatormeier Business Consulting";
 				TargetAttributes = {
 					9A7F3FF916E2E6DF00DDBE40 = {
@@ -395,6 +395,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -455,6 +456,7 @@
 				INFOPLIST_FILE = "device-sensor-streamer/SensorStreamer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.heistersgenerative.sensorosc;
 				PRODUCT_NAME = SensorStreamer;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "device-sensor-streamer/SensorStreamer-Bridging-Header.h";
@@ -481,6 +483,7 @@
 				INFOPLIST_FILE = "device-sensor-streamer/SensorStreamer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.heistersgenerative.sensorosc;
 				PRODUCT_NAME = SensorStreamer;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "device-sensor-streamer/SensorStreamer-Bridging-Header.h";

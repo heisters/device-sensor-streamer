@@ -11,7 +11,9 @@
 
 @class GraphView;
 
-@interface SendController : UITableViewController< MotionDelegate >
+@interface SendController : UIViewController< MotionDelegate >
 @property (weak, nonatomic) IBOutlet GraphView *accelView;
+@property (weak, nonatomic) IBOutlet GraphView *orientationView;
+@property (weak, nonatomic) IBOutlet GraphView *userAccelView;
 @property (strong, nonatomic) Sender *sender;
 @end

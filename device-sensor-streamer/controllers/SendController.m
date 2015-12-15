@@ -41,34 +41,17 @@
 {
     [self.accelView push:data.acceleration.x y:data.acceleration.y z:data.acceleration.z];
 
-//    NSDate *now = [NSDate date];
-//    [self.timesData addObject:now];
-//
-//
-//    while ( [[self.timesData objectAtIndex:0] timeIntervalSinceNow] < -5.0 ) {
-//        [self.timesData removeObjectAtIndex:0];
-//        NSInteger i = 0;//self.accelView.data.xValCount - 1;
-////        [self.accelView.data remove:i];
-//        [self.accelView.data removeEntryByXIndex:i dataSetIndex:0];
-//        [self.accelView.data removeEntryByXIndex:i dataSetIndex:1];
-//        [self.accelView.data removeEntryByXIndex:i dataSetIndex:2];
-//    }
-//
-//    [self.accelView.data addXValue:[@([now timeIntervalSinceNow]) stringValue]];
-//    [self.accelView.data addEntry:[[ChartDataEntry alloc] initWithValue:data.acceleration.x xIndex:[self.accelView.data xValCount]] dataSetIndex:0];
-//    [self.accelView.data addEntry:[[ChartDataEntry alloc] initWithValue:data.acceleration.y xIndex:[self.accelView.data xValCount]] dataSetIndex:1];
-//    [self.accelView.data addEntry:[[ChartDataEntry alloc] initWithValue:data.acceleration.z xIndex:[self.accelView.data xValCount]] dataSetIndex:2];
-//
-//    [self.accelView notifyDataSetChanged];
+
+}
+
+- (void)didMove:(CMDeviceMotion *)data error:(NSError *)error
+{
+    [self.userAccelView push:data.userAcceleration.x y:data.userAcceleration.y z:data.userAcceleration.z];
+
+    [self.orientationView push:data.attitude.quaternion.x y:data.attitude.quaternion.y z:data.attitude.quaternion.z];
 }
 
 - (void)viewDidUnload {
-//    [self setSX:nil];
-//    [self setSY:nil];
-//    [self setSZ:nil];
-//    [self setRX:nil];
-//    [self setRY:nil];
-//    [self setRZ:nil];
     [super viewDidUnload];
 }
 @end
