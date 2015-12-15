@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     self.sender = [[Sender alloc] initWithSettings:[[SensorSettings alloc] initWithPreviousStateIfPossible]];
     self.sender.delegate = self;
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(guidedAccessChanged) name:UIAccessibilityGuidedAccessStatusDidChangeNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -41,7 +43,6 @@
 {
     [self.accelView push:data.acceleration.x y:data.acceleration.y z:data.acceleration.z];
 
-
 }
 
 - (void)didMove:(CMDeviceMotion *)data error:(NSError *)error
@@ -51,7 +52,14 @@
     [self.orientationView push:data.attitude.quaternion.x y:data.attitude.quaternion.y z:data.attitude.quaternion.z];
 }
 
+- (void)guidedAccessChanged
+{
+    BOOL enabled = !UIAccessibilityIsGuidedAccessEnabled();
+    [self.tabBarController.tabBar setUserInteractionEnabled:enabled];
+}
+
 - (void)viewDidUnload {
     [super viewDidUnload];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end
