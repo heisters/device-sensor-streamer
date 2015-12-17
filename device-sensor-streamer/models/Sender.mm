@@ -58,7 +58,7 @@
     NSString *host = broadcast ? self.settings.targetBroadcastAddress : self.settings.targetAddress;
     NSInteger port = self.settings.accelerometerPort;
 
-    if ( self.osc && self.osc.host == host && self.osc.port == port ) {
+    if ( self.osc && ! self.osc.isClosed && self.osc.host == host && self.osc.port == port ) {
         return;
     }
 
