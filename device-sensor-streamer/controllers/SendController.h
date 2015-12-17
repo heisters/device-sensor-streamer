@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet GraphView *accelView;
 @property (weak, nonatomic) IBOutlet GraphView *orientationView;
 @property (weak, nonatomic) IBOutlet GraphView *userAccelView;
+- (IBAction)didTouchUpInsideAlertButton:(id)sender;
 @property (strong, nonatomic) Sender *sender;
 @end

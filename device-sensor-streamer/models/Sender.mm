@@ -156,4 +156,9 @@
     return [[self.osc message] add:self.deviceId];
 }
 
+- (void)bang
+{
+    [[self.message to:@"/!"] send];
+}
+
 @end

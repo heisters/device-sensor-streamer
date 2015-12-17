@@ -62,4 +62,8 @@
     [super viewDidUnload];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
+- (IBAction)didTouchUpInsideAlertButton:(id)sender {
+    [self.sender bang];
+}
 @end

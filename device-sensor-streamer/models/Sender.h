@@ -24,4 +24,5 @@
 - (id)initWithSettings:(SensorSettings *)settings;
 - (void)start;
 - (void)stop;
+- (void)bang;
 @end
