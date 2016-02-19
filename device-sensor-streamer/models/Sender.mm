@@ -92,7 +92,7 @@
     };
 
 
-    [self.motionManager startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXMagneticNorthZVertical toQueue:self.deviceQueue withHandler:motionHandler];
+    [self.motionManager startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXArbitraryZVertical toQueue:self.deviceQueue withHandler:motionHandler];
     [self.motionManager startAccelerometerUpdatesToQueue:self.accelQueue withHandler:accelHandler];
     [self.motionManager startGyroUpdatesToQueue:self.gyroQueue withHandler:gyroHandler];
 
