@@ -13,6 +13,7 @@
 		3C098AF71C10CE1D00B7C282 /* broadcast.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C098AF51C10CE1D00B7C282 /* broadcast.png */; };
 		3C098AF81C10CE1D00B7C282 /* broadcast@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C098AF61C10CE1D00B7C282 /* broadcast@2x.png */; };
 		3C36A8F418C7DD7600D13CAF /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C36A8F318C7DD7600D13CAF /* CoreMotion.framework */; };
+		3C5910FC1C77966200134D17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5910FB1C77966200134D17 /* Images.xcassets */; };
 		3CF9FFA51C20B86100A9F636 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9FFA41C20B86100A9F636 /* GraphView.swift */; };
 		3CF9FFAA1C224C4E00A9F636 /* alert.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF9FFA81C224C4E00A9F636 /* alert.png */; };
 		3CF9FFAB1C224C4E00A9F636 /* alert@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF9FFA91C224C4E00A9F636 /* alert@2x.png */; };
@@ -28,11 +29,7 @@
 		9AB4EB2716E9D055004F13B5 /* acceleration.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB1F16E9D055004F13B5 /* acceleration.png */; };
 		9AB4EB3416E9D07F004F13B5 /* SendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3116E9D07F004F13B5 /* SendController.m */; };
 		9AB4EB3516E9D07F004F13B5 /* SensorSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3316E9D07F004F13B5 /* SensorSettingsController.m */; };
-		9AB4EB3716E9D1F4004F13B5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3616E9D1F3004F13B5 /* Default-568h@2x.png */; };
-		9AB4EB3916E9D20B004F13B5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3816E9D20B004F13B5 /* Default@2x.png */; };
 		9AB4EB3B16E9D215004F13B5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3A16E9D214004F13B5 /* Default.png */; };
-		9AB4EB3D16E9D231004F13B5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3C16E9D231004F13B5 /* icon.png */; };
-		9AB4EB3F16E9D23D004F13B5 /* icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB4EB3E16E9D23D004F13B5 /* icon-retina.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +76,7 @@
 		3C098AF51C10CE1D00B7C282 /* broadcast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = broadcast.png; sourceTree = "<group>"; };
 		3C098AF61C10CE1D00B7C282 /* broadcast@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "broadcast@2x.png"; sourceTree = "<group>"; };
 		3C36A8F318C7DD7600D13CAF /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		3C5910FB1C77966200134D17 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SensorStreamer/Images.xcassets; sourceTree = "<group>"; };
 		3CF9FFA31C20B86000A9F636 /* SensorStreamer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SensorStreamer-Bridging-Header.h"; sourceTree = "<group>"; };
 		3CF9FFA41C20B86100A9F636 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphView.swift; path = views/GraphView.swift; sourceTree = "<group>"; };
 		3CF9FFA81C224C4E00A9F636 /* alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert.png; sourceTree = "<group>"; };
@@ -103,11 +101,7 @@
 		9AB4EB3116E9D07F004F13B5 /* SendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendController.m; sourceTree = "<group>"; };
 		9AB4EB3216E9D07F004F13B5 /* SensorSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorSettingsController.h; sourceTree = "<group>"; };
 		9AB4EB3316E9D07F004F13B5 /* SensorSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorSettingsController.m; sourceTree = "<group>"; };
-		9AB4EB3616E9D1F3004F13B5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		9AB4EB3816E9D20B004F13B5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9AB4EB3A16E9D214004F13B5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		9AB4EB3C16E9D231004F13B5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		9AB4EB3E16E9D23D004F13B5 /* icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-retina.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +152,7 @@
 		9A7F3FF116E2E6DF00DDBE40 = {
 			isa = PBXGroup;
 			children = (
+				3C5910FB1C77966200134D17 /* Images.xcassets */,
 				3C01B4BA18DB6E4B0044D432 /* iOS-oscpack.xcodeproj */,
 				9A7F400316E2E6DF00DDBE40 /* device-sensor-streamer */,
 				9A7F3FFC16E2E6DF00DDBE40 /* Frameworks */,
@@ -219,11 +214,7 @@
 				3C098AF61C10CE1D00B7C282 /* broadcast@2x.png */,
 				3C098AF11C10CCB800B7C282 /* settings.png */,
 				3C098AF21C10CCB800B7C282 /* settings@2x.png */,
-				9AB4EB3E16E9D23D004F13B5 /* icon-retina.png */,
-				9AB4EB3C16E9D231004F13B5 /* icon.png */,
 				9AB4EB3A16E9D214004F13B5 /* Default.png */,
-				9AB4EB3816E9D20B004F13B5 /* Default@2x.png */,
-				9AB4EB3616E9D1F3004F13B5 /* Default-568h@2x.png */,
 				9AB4EB1F16E9D055004F13B5 /* acceleration.png */,
 			);
 			name = Images;
@@ -328,17 +319,14 @@
 				9A7F400816E2E6DF00DDBE40 /* InfoPlist.strings in Resources */,
 				9A7F401716E2E6DF00DDBE40 /* MainStoryboard.storyboard in Resources */,
 				9AB4EB2716E9D055004F13B5 /* acceleration.png in Resources */,
-				9AB4EB3716E9D1F4004F13B5 /* Default-568h@2x.png in Resources */,
-				9AB4EB3916E9D20B004F13B5 /* Default@2x.png in Resources */,
 				3CF9FFAB1C224C4E00A9F636 /* alert@2x.png in Resources */,
 				3C098AF71C10CE1D00B7C282 /* broadcast.png in Resources */,
+				3C5910FC1C77966200134D17 /* Images.xcassets in Resources */,
 				3C098AF41C10CCB800B7C282 /* settings@2x.png in Resources */,
 				9AB4EB3B16E9D215004F13B5 /* Default.png in Resources */,
 				3C098AF81C10CE1D00B7C282 /* broadcast@2x.png in Resources */,
 				3C098AF31C10CCB800B7C282 /* settings.png in Resources */,
 				3CF9FFAA1C224C4E00A9F636 /* alert.png in Resources */,
-				9AB4EB3D16E9D231004F13B5 /* icon.png in Resources */,
-				9AB4EB3F16E9D23D004F13B5 /* icon-retina.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +437,8 @@
 		9A7F401E16E2E6E000DDBE40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -476,6 +466,8 @@
 		9A7F401F16E2E6E000DDBE40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
