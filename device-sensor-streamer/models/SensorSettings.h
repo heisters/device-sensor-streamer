@@ -14,8 +14,8 @@
 @property (nonatomic, getter = isUsingBroadcast) BOOL usingBroadcast;
 @property (nonatomic, strong) NSString* targetAddress;
 @property (nonatomic, strong) NSString* targetBroadcastAddress;
-
 @property (nonatomic, getter = isAccelerometerSendingData) BOOL accelerometerSendingData;
+@property (nonatomic) BOOL drawMode; // 0 for minimal, 1 for full
 @property (nonatomic) NSInteger accelerometerPort;
 
 #pragma mark -

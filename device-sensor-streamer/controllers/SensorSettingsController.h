@@ -22,5 +22,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *targetAddress;
 @property (weak, nonatomic) IBOutlet UISwitch *shouldSendAccelerometerData;
 @property (weak, nonatomic) IBOutlet UITextField *accelerometerPort;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *drawDataModeControl;
 #pragma mark -
 @end

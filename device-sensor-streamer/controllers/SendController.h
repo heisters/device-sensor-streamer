@@ -12,9 +12,9 @@
 @class GraphView;
 
 @interface SendController : UIViewController< MotionDelegate >
-@property (weak, nonatomic) IBOutlet GraphView *accelView;
-@property (weak, nonatomic) IBOutlet GraphView *orientationView;
-@property (weak, nonatomic) IBOutlet GraphView *userAccelView;
-- (IBAction)didTouchUpInsideAlertButton:(id)sender;
+@property (strong, nonatomic) GraphView *accelView;
+@property (strong, nonatomic) GraphView *orientationView;
+@property (strong, nonatomic) GraphView *userAccelView;
+@property (weak, nonatomic) IBOutlet UIView *minimalMonitorView;
 @property (strong, nonatomic) Sender *sender;
 @end

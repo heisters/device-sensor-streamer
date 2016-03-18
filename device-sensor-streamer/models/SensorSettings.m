@@ -17,6 +17,8 @@
 #define kACCELEROMETER_SENDING_DATA @"accelerometerSendingData"
 #define kACCELEROMETER_PORT         @"accelerometerPort"
 
+#define kDRAW_MODE @"drawMode"
+
 @interface SensorSettings ()
 
 @property (nonatomic, strong) NSUserDefaults* defaults;
@@ -43,6 +45,7 @@
       kTARGET_BROADCAST_ADDRESS: self.targetBroadcastAddress,
       kACCELEROMETER_SENDING_DATA: [NSNumber numberWithBool:self.accelerometerSendingData],
       kACCELEROMETER_PORT: [NSString stringWithFormat:@"%ld", (long)self.accelerometerPort],
+      kDRAW_MODE: [NSNumber numberWithBool:self.drawMode]
       };
 
     [self.defaults setObject:settingsDictionary forKey:kSETTINGS_DICTIONARY];
@@ -58,6 +61,7 @@
         self.targetBroadcastAddress = [settingsDictionary objectForKey:kTARGET_BROADCAST_ADDRESS];
         self.accelerometerPort = [[settingsDictionary objectForKey:kACCELEROMETER_PORT] integerValue];
         self.accelerometerSendingData = [[settingsDictionary objectForKey:kACCELEROMETER_SENDING_DATA] boolValue];
+        self.drawMode = [[settingsDictionary objectForKey:kDRAW_MODE] boolValue];
     }
 }
 

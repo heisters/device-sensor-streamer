@@ -34,7 +34,9 @@
 
         self.shouldSendAccelerometerData.on = self.sensorSettings.isAccelerometerSendingData;
         self.accelerometerPort.text = [NSString stringWithFormat:@"%ld", (long)self.sensorSettings.accelerometerPort];
-
+        
+        self.drawDataModeControl.selectedSegmentIndex = self.sensorSettings.drawMode;
+        
         // Update states of segment buttons
         [self udpModeChanged:self.udpMode];
     }
@@ -73,6 +75,7 @@
     NSString* accelerometerPort = self.accelerometerPort.text;
 
     // Set direct settings
+    self.sensorSettings.drawMode = self.drawDataModeControl.selectedSegmentIndex;
     self.sensorSettings.usingBroadcast = usingBroadcast;
     self.sensorSettings.accelerometerSendingData = sendAccelerometerData;
     if ( usingBroadcast ) {
