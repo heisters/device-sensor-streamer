@@ -17,6 +17,8 @@
 		3CF9FFA51C20B86100A9F636 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9FFA41C20B86100A9F636 /* GraphView.swift */; };
 		3CF9FFAA1C224C4E00A9F636 /* alert.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF9FFA81C224C4E00A9F636 /* alert.png */; };
 		3CF9FFAB1C224C4E00A9F636 /* alert@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF9FFA91C224C4E00A9F636 /* alert@2x.png */; };
+		5CA371121CBF2B2B00DFEFB6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA371111CBF2B2B00DFEFB6 /* Reachability.m */; };
+		5CA371151CBF2B4700DFEFB6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA371141CBF2B4700DFEFB6 /* SystemConfiguration.framework */; };
 		9A1B804B16EABA1A00941540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B804616EABA1A00941540 /* main.m */; };
 		9A1B804C16EABA1A00941540 /* SensorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1B804816EABA1A00941540 /* SensorAppDelegate.m */; };
 		9A29D20016E3D94C005519C6 /* SensorSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A29D1FF16E3D94C005519C6 /* SensorSettings.m */; };
@@ -81,6 +83,9 @@
 		3CF9FFA41C20B86100A9F636 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphView.swift; path = views/GraphView.swift; sourceTree = "<group>"; };
 		3CF9FFA81C224C4E00A9F636 /* alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert.png; sourceTree = "<group>"; };
 		3CF9FFA91C224C4E00A9F636 /* alert@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alert@2x.png"; sourceTree = "<group>"; };
+		5CA371101CBF2B2B00DFEFB6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		5CA371111CBF2B2B00DFEFB6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		5CA371141CBF2B4700DFEFB6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9A1B804616EABA1A00941540 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = support/main.m; sourceTree = "<group>"; };
 		9A1B804716EABA1A00941540 /* SensorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorAppDelegate.h; path = support/SensorAppDelegate.h; sourceTree = "<group>"; };
 		9A1B804816EABA1A00941540 /* SensorAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorAppDelegate.m; path = support/SensorAppDelegate.m; sourceTree = "<group>"; };
@@ -109,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CA371151CBF2B4700DFEFB6 /* SystemConfiguration.framework in Frameworks */,
 				3C01B4C818DB77EC0044D432 /* libiOS-oscpack.a in Frameworks */,
 				3C36A8F418C7DD7600D13CAF /* CoreMotion.framework in Frameworks */,
 				9A7F3FFE16E2E6DF00DDBE40 /* UIKit.framework in Frameworks */,
@@ -136,6 +142,16 @@
 				3CF9FFA31C20B86000A9F636 /* SensorStreamer-Bridging-Header.h */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		5CA3710F1CBF2B2B00DFEFB6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5CA371101CBF2B2B00DFEFB6 /* Reachability.h */,
+				5CA371111CBF2B2B00DFEFB6 /* Reachability.m */,
+			);
+			name = Utils;
+			path = utils;
 			sourceTree = "<group>";
 		};
 		9A29D20116E3D951005519C6 /* Models */ = {
@@ -171,6 +187,7 @@
 		9A7F3FFC16E2E6DF00DDBE40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5CA371141CBF2B4700DFEFB6 /* SystemConfiguration.framework */,
 				3C36A8F318C7DD7600D13CAF /* CoreMotion.framework */,
 				9A7F3FFD16E2E6DF00DDBE40 /* UIKit.framework */,
 				9A7F3FFF16E2E6DF00DDBE40 /* Foundation.framework */,
@@ -185,6 +202,7 @@
 				3C2EE9091C1211D90079B8E1 /* Views */,
 				9AB4EB2F16E9D07F004F13B5 /* Controllers */,
 				9A29D20116E3D951005519C6 /* Models */,
+				5CA3710F1CBF2B2B00DFEFB6 /* Utils */,
 				9A7F400416E2E6DF00DDBE40 /* Supporting Files */,
 				9A7F403316E3018700DDBE40 /* Images */,
 				9A7F401516E2E6DF00DDBE40 /* MainStoryboard.storyboard */,
@@ -339,6 +357,7 @@
 			files = (
 				9A29D20016E3D94C005519C6 /* SensorSettings.m in Sources */,
 				9AB4EB1E16E9CFD0004F13B5 /* Sender.mm in Sources */,
+				5CA371121CBF2B2B00DFEFB6 /* Reachability.m in Sources */,
 				3CF9FFA51C20B86100A9F636 /* GraphView.swift in Sources */,
 				9AB4EB3416E9D07F004F13B5 /* SendController.m in Sources */,
 				9AB4EB3516E9D07F004F13B5 /* SensorSettingsController.m in Sources */,

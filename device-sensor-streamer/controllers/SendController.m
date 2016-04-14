@@ -8,13 +8,21 @@
 
 #import "SendController.h"
 #import "SensorStreamer-Swift.h"
+#import "Reachability.h"
 
 @interface SendController()
+
+@property (strong, nonatomic) Reachability *reachability;
+
 @end
 
 @implementation SendController
 
 - (void)viewDidLoad {
+    self.reachability = [Reachability reachabilityForLocalWiFi];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    [self.reachability startNotifier];
+    
     self.sender = [[Sender alloc] initWithSettings:[[SensorSettings alloc] initWithPreviousStateIfPossible]];
     self.sender.delegate = self;
 
@@ -103,6 +111,18 @@
 {
     BOOL enabled = !UIAccessibilityIsGuidedAccessEnabled();
     [self.tabBarController.tabBar setUserInteractionEnabled:enabled];
+}
+
+- (void)reachabilityChanged:(NSNotification *)n
+{
+    NetworkStatus status = self.reachability.currentReachabilityStatus;
+    
+    if (status == NotReachable) {
+        [self.sender stop];
+    }
+    else if (status == ReachableViaWiFi) {
+        [self.sender start];
+    }
 }
 
 - (void)viewDidUnload {
